@@ -1,0 +1,49 @@
+.btn {
+  border: 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  display: inline-block;
+  @include getFontSize("button");
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  @include e(link) {
+    &:hover {
+      color: white;
+    }
+  }
+
+  // button styles
+  @include m(primary) {
+    background-color: getColor("primary.base");
+
+    &:hover:enabled {
+      background-color: getColor("primary.dark");
+    }
+  }
+
+  @include m(secondary) {
+    background-color: getColor("secondary.base");
+
+    &:hover:enable {
+      background-color: getColor("secondary.dark");
+    }
+  }
+
+  @include m(basic) {
+    background-color: $grey-25;
+
+    &:hover:enable {
+      background-color: $grey-100;
+    }
+  }
+
+  // button sizes
+  @include m(regular) {
+    padding: 16px 27px;
+  }
+}
