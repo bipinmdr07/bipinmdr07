@@ -1,0 +1,147 @@
+// ==========================================================================
+// Base
+// A Base rule is applied to HTML element using an element selector, a
+// descendent selector, or a child selector, along with any pseudo-classes.
+// We cannot reference any element defined here by their respective class or ID name.
+// This defines the default styling for how that element should look.
+// Changes in style other than default should be overwritten using other partials.
+// ==========================================================================
+
+// Import Custom font here.
+@if variable-exists(font-url) {
+  @import url($font-url);
+}
+
+// Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  // Global Clearfixing
+  @if $grid-type==float {
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}
+
+// Base Code
+html,
+body {
+  font-size: 100%;
+}
+
+html.full-height {
+  height: 100%;
+
+  body {
+    height: 100%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $grey-100;
+  font-family: $font-primary;
+  font-size: $base__font-size;
+  text-rendering: optimizeLegibility;
+  line-height: $base__body__line;
+}
+
+a {
+  outline: none;
+  color: getColor("primary.base");
+  text-decoration: none;
+
+  &:hover {
+    color: getColor("primary.dark");
+  }
+}
+
+@if $grid-type==float {
+  a,
+  span,
+  strong {
+    &:after {
+      @extend %clearfix-none;
+    }
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  line-height: $base__header__line;
+}
+
+h1 {
+  @include getHeaderFontSize("h1");
+  color: $grey-100;
+  @include mqmax(sm) {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  @include getHeaderFontSize("h2");
+}
+
+h3 {
+  @include getHeaderFontSize("h3");
+  color: $grey-100;
+}
+
+h4 {
+  @include getHeaderFontSize("h4");
+}
+
+h5 {
+  @include getHeaderFontSize("h5");
+}
+
+h6 {
+  @include getHeaderFontSize("title");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+[role="button"] {
+  outline: 0;
+}
+
+input::placeholder {
+  color: $grey-border;
+}
+
+/* Remove increment and decrement buttons in number field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Make the cursor pointer when hovering on x icon in search field */
+input[type="search"]::-webkit-search-decoration:hover,
+input[type="search"]::-webkit-search-cancel-button:hover {
+  cursor: pointer;
+}

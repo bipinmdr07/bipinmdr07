@@ -1,0 +1,98 @@
+%btn-clear {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: left;
+  flex: 1;
+  width: 100%;
+  &:active {
+    .actionable & {
+      background-color: rgba($black, 0.03);
+    }
+  }
+}
+
+%ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+%formInput {
+  position: relative;
+  outline: 0;
+  background: #ffffff;
+  border: 1px solid #d6dcdf;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $grey-100;
+  width: 100%;
+  min-height: 48px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 19px;
+    color: $grey-border;
+  }
+}
+
+%inputTag {
+  background-color: #ffffff;
+  border: 1px solid $grey-50;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0px 2px 2px;
+}
+
+%inputLabel {
+  font-size: 13px;
+  line-height: 16px;
+  padding: 6px 11px;
+  color: $grey-100;
+}
+
+%inputRemove {
+  padding-right: 11px;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    background-color: transparent;
+
+    svg path {
+      fill: darken($color: $accent-resting, $amount: 5);
+    }
+  }
+}
+
+%scrollBar {
+  &::-webkit-scrollbar {
+    width: 18px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey-border;
+    border-radius: 10px;
+    border: 6px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($color: $grey-border, $amount: 10);
+    border: 6px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-button {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}

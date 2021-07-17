@@ -1,0 +1,64 @@
+// Default color
+$white: #ffffff !default;
+$black: #000000 !default;
+
+// grey color shades
+$grey-0: #ffffff;
+$grey-25: #f6f9ff;
+$grey-50: #dbe6f3;
+$grey-75: #566575;
+$grey-100: #38414b;
+$grey-border: #a6b5c6;
+
+// Base colors
+$primary-color: #114175 !default;
+$secondary-color: #d6744d !default;
+$error-color: #ee3737 !default;
+$success-color: #35c635 !default;
+$warning-color: #fdba2b !default;
+$info-color: #1089f9 !default;
+
+$background-color: $white;
+
+$accent-resting: #159da5 !default;
+$accent-highlight: #8aced2 !default;
+
+// Color Palette
+$colorMap: (
+  "white": (
+    "base": $white,
+  ),
+  "black": (
+    "base": $black,
+  ),
+  "primary": (
+    "base": $primary-color,
+    "dark": darken($primary-color, 10%),
+    "light": lighten($primary-color, 10%),
+  ),
+  "secondary": (
+    "base": $secondary-color,
+    "dark": darken($secondary-color, 10%),
+    "light": lighten($secondary-color, 10%),
+  ),
+  "danger": (
+    "base": $error-color,
+  ),
+  "success": (
+    "base": $success-color,
+  ),
+  "warning": (
+    "base": $warning-color,
+  ),
+  "grey": (
+    "stroke": #e7e8e9,
+    "input-bg": #f8f8f8,
+    "text": #131e29,
+    "text60": rgba(#132e29, 0.6),
+    "text36": rgba(#132e29, 0.36),
+    "progress-bar-default": #eeeff0,
+    "light": #d9dbdd,
+    "icon": #aaaeb2,
+    "stroke-light": #eeeff0,
+  ),
+);

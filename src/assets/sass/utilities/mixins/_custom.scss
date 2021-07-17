@@ -1,0 +1,25 @@
+@mixin formInput {
+  position: relative;
+  outline: 0;
+  background: #ffffff;
+  border: 1px solid #d6dcdf;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $grey-100;
+  width: 100%;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 19px;
+    color: $grey-border;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
