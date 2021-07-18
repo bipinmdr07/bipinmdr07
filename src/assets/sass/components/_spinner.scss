@@ -1,0 +1,63 @@
+.spinner {
+  @include flexCenter;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border-top: 2px solid $accent-resting;
+  border-radius: 2px solid transparent;
+  border-radius: 50%;
+
+  // Safari
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+
+  @include m(tiny) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @include m(regular) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include m(large) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/*  Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
