@@ -14,6 +14,7 @@
     "css-loader": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0",
     "react-scripts": "4.0.3",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
@@ -38,6 +39,18 @@
     "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "devDependencies": {
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
     "tslint-config-prettier": "^1.18.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+
+  "lint-staged": {
+    "*.{json,css,scss,md}": ["prettier . --write"],
+    "*.{js,jsx}": ["tslint --fix tslint.json", "prettier . --write", "git add"]
   }
 }
