@@ -12,9 +12,11 @@
     "@types/react-dom": "^17.0.0",
     "classnames": "^2.3.1",
     "css-loader": "^6.0.0",
+    "history": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
@@ -32,13 +34,25 @@
     "tslint:fix": "tslint --fix -p tsconfig.json"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.8",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.1",
     "tslint-config-prettier": "^1.18.0"
@@ -48,9 +62,14 @@
       "pre-commit": "lint-staged"
     }
   },
-
   "lint-staged": {
-    "*.{json,css,scss,md}": ["prettier . --write"],
-    "*.{js,jsx}": ["tslint --fix tslint.json", "prettier . --write", "git add"]
+    "*.{json,css,scss,md}": [
+      "prettier . --write"
+    ],
+    "*.{js,jsx}": [
+      "tslint --fix tslint.json",
+      "prettier . --write",
+      "git add"
+    ]
   }
 }
