@@ -1,47 +1,42 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
+
+import { snakeToCamelCase } from '../../../utils/string';
 
 type Appearance =
-  | "default"
-  | "destructive"
-  | "white"
-  | "subtle"
-  | "disabled"
-  | "info"
-  | "alert"
-  | "warning"
-  | "success"
-  | "primary_lighter"
-  | "primary"
-  | "primary_dark"
-  | "alert_lighter"
-  | "alert_dark"
-  | "warning_lighter"
-  | "warning_dark"
-  | "success_lighter"
-  | "success_dark"
-  | "accent1"
-  | "accent1_lighter"
-  | "accent1_dark"
-  | "accent2"
-  | "accent2_lighter"
-  | "accent2_dark"
-  | "accent3"
-  | "accent3_lighter"
-  | "accent3_dark"
-  | "accent4"
-  | "accent4_lighter"
-  | "accent4_dark"
-  | "inverse";
+  | 'default'
+  | 'destructive'
+  | 'white'
+  | 'subtle'
+  | 'disabled'
+  | 'info'
+  | 'alert'
+  | 'warning'
+  | 'success'
+  | 'primary_lighter'
+  | 'primary'
+  | 'primary_dark'
+  | 'alert_lighter'
+  | 'alert_dark'
+  | 'warning_lighter'
+  | 'warning_dark'
+  | 'success_lighter'
+  | 'success_dark'
+  | 'accent1'
+  | 'accent1_lighter'
+  | 'accent1_dark'
+  | 'accent2'
+  | 'accent2_lighter'
+  | 'accent2_dark'
+  | 'accent3'
+  | 'accent3_lighter'
+  | 'accent3_dark'
+  | 'accent4'
+  | 'accent4_lighter'
+  | 'accent4_dark'
+  | 'inverse';
 
-type IconType =
-  | "filled"
-  | "outlined"
-  | "outline"
-  | "rounded"
-  | "round"
-  | "two-tone"
-  | "sharp"; // 'outline', 'rounded' to be deprecated soon.
+type IconType = 'filled' | 'outlined' | 'outline' | 'rounded' | 'round' | 'two-tone' | 'sharp'; // 'outline', 'rounded' to be deprecated soon.
 
 interface IconProps {
   name?: string;
@@ -56,32 +51,24 @@ interface IconProps {
 export const Icon = (props: IconProps) => {
   const { appearance, className, name, size, onClick, children } = props;
 
-  const mapper = (val: IconProps["type"]) => {
-    if (val === "outline") return "outlined";
-    if (val === "rounded") return "round";
+  const mapper = (val: IconProps['type']) => {
+    if (val === 'outline') return 'outlined';
+    if (val === 'rounded') return 'round';
     return val;
   };
 
   const type = mapper(props.type);
 
   const getIconAppearance = (iconColor: string) => {
-    const x = iconColor.indexOf("_");
-    return (
-      iconColor.slice(0, x) +
-      iconColor.charAt(x + 1).toUpperCase() +
-      iconColor.slice(x + 2)
-    );
+    return snakeToCamelCase(iconColor);
   };
 
-  const color =
-    appearance && appearance.includes("_")
-      ? getIconAppearance(appearance)
-      : appearance;
+  const color = appearance && appearance.includes('_') ? getIconAppearance(appearance) : appearance;
 
   const iconClass = classNames({
-    ["material-icons"]: true,
-    [`material-icons=${mapper(type)}`]: type && type !== "filled",
-    ["icon"]: true,
+    ['material-icons']: true,
+    [`material-icons=${mapper(type)}`]: type && type !== 'filled',
+    ['icon']: true,
     [`icon--${color}`]: appearance,
     [`${className}`]: className,
   });
@@ -106,10 +93,10 @@ export const Icon = (props: IconProps) => {
   );
 };
 
-Icon.displayName = "Icon";
+Icon.displayName = 'Icon';
 Icon.defaultProps = {
   size: 16,
-  type: "round",
+  type: 'round',
 };
 
 export default Icon;
