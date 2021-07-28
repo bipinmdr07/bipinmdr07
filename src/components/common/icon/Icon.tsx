@@ -1,46 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
+import * as MaterialIcon from 'react-icons/md';
+import * as AntIcon from 'react-icons/ai';
 
-import { snakeToCamelCase } from '../../../utils/string';
+export type Name = 'close' | 'facebook' | 'instagram' | 'menu' | 'home' | 'timeline' | 'phonelink' | 'assignment';
+type Appearance = 'default' | 'primary' | 'secondary';
+type Size = 'tiny' | 'regular' | 'large';
 
-type Appearance =
-  | 'default'
-  | 'destructive'
-  | 'white'
-  | 'subtle'
-  | 'disabled'
-  | 'info'
-  | 'alert'
-  | 'warning'
-  | 'success'
-  | 'primary_lighter'
-  | 'primary'
-  | 'primary_dark'
-  | 'alert_lighter'
-  | 'alert_dark'
-  | 'warning_lighter'
-  | 'warning_dark'
-  | 'success_lighter'
-  | 'success_dark'
-  | 'accent1'
-  | 'accent1_lighter'
-  | 'accent1_dark'
-  | 'accent2'
-  | 'accent2_lighter'
-  | 'accent2_dark'
-  | 'accent3'
-  | 'accent3_lighter'
-  | 'accent3_dark'
-  | 'accent4'
-  | 'accent4_lighter'
-  | 'accent4_dark'
-  | 'inverse';
-
-type IconType = 'filled' | 'outlined' | 'outline' | 'rounded' | 'round' | 'two-tone' | 'sharp'; // 'outline', 'rounded' to be deprecated soon.
+type IconType = 'transparent' | 'filled' | 'outlined' | 'outline' | 'rounded' | 'round' | 'two-tone' | 'sharp'; // 'outline', 'rounded' to be deprecated soon.
 
 interface IconProps {
-  name?: string;
-  size?: number;
+  name: Name;
+  size?: Size;
   type?: IconType;
   className?: string;
   appearance?: Appearance;
@@ -49,53 +20,63 @@ interface IconProps {
 }
 
 export const Icon = (props: IconProps) => {
-  const { appearance, className, name, size, onClick, children } = props;
+  const { appearance = 'default', className, type = 'transparent', name, size, onClick } = props;
 
-  const mapper = (val: IconProps['type']) => {
-    if (val === 'outline') return 'outlined';
-    if (val === 'rounded') return 'round';
-    return val;
-  };
+  let SelectedIcon = <></>;
 
-  const type = mapper(props.type);
-
-  const getIconAppearance = (iconColor: string) => {
-    return snakeToCamelCase(iconColor);
-  };
-
-  const color = appearance && appearance.includes('_') ? getIconAppearance(appearance) : appearance;
-
-  const iconClass = classNames({
-    ['material-icons']: true,
-    [`material-icons=${mapper(type)}`]: type && type !== 'filled',
-    ['icon']: true,
-    [`icon--${color}`]: appearance,
-    [`${className}`]: className,
-  });
-
-  const styles = {
-    fontSize: `${size}px`,
-    width: `${size}px`,
-  };
-
-  if (children && React.isValidElement(children)) {
-    return (
-      <span {...props} className={className}>
-        {children}
-      </span>
-    );
+  switch (name) {
+    case 'close':
+      SelectedIcon = <MaterialIcon.MdClose />;
+      break;
+    case 'facebook':
+      SelectedIcon = <AntIcon.AiFillFacebook />;
+      break;
+    case 'instagram':
+      SelectedIcon = <AntIcon.AiFillInstagram />;
+      break;
+    case 'menu':
+      SelectedIcon = <MaterialIcon.MdMenu />;
+      break;
+    case 'home':
+      SelectedIcon = <MaterialIcon.MdHome />;
+      break;
+    case 'timeline':
+      SelectedIcon = <MaterialIcon.MdTimeline />;
+      break;
+    case 'phonelink':
+      SelectedIcon = <MaterialIcon.MdPhonelink />;
+      break;
+    case 'assignment':
+      SelectedIcon = <MaterialIcon.MdAssignment />;
+      break;
   }
 
+  const iconClass = classNames({
+    icon: true,
+    [`icon--${type}`]: type,
+    [`icon--${size}`]: size,
+    [`${className}`]: className,
+    [`icon--${appearance}`]: appearance,
+  });
+
+  /* if (children && React.isValidElement(children)) {
+   *   return (
+   *     <span {...props} className={className}>
+   *       {children}
+   *     </span>
+   *   );
+   * } */
+
   return (
-    <i {...props} className={iconClass} style={styles} onClick={onClick}>
-      {type ? `${name}_${type}` : name}
+    <i {...props} className={iconClass} onClick={onClick}>
+      {SelectedIcon}
     </i>
   );
 };
 
 Icon.displayName = 'Icon';
 Icon.defaultProps = {
-  size: 16,
+  size: 'regular',
   type: 'round',
 };
 

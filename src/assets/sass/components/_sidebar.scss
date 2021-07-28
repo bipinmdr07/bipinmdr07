@@ -1,0 +1,80 @@
+.sidebar-nav {
+  min-width: 253px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 24px;
+  box-shadow: 1px 0 0 $grey-50;
+  transition: all 0.3s ease-in-out;
+
+  @include mqmax(lg) {
+    position: fixed;
+    background-color: #ffffff;
+    left: -100%;
+    z-index: 50;
+  }
+
+  @include mq(lg) {
+    .sidebar-nav__close-btn {
+      display: none;
+    }
+  }
+
+  @include e(list) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include e(item) {
+    margin-bottom: 16px;
+  }
+
+  @include e(link) {
+    display: flex;
+    align-items: center;
+
+    .sidebar-nav__item__icon {
+      margin-right: 8px;
+    }
+  }
+
+  @include m(active) {
+    font-weight: bold;
+
+    .sidebar-nav__icon {
+      background: $secondary-color;
+    }
+
+    .sidebar-nav__icon svg path {
+      fill: #ffffff;
+    }
+  }
+
+  @include e(icon) {
+    width: 40px;
+    height: 40px;
+    background: $grey-25;
+    maring-right: 11px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include e(close-btn) {
+    position: absolute;
+    top: 18px;
+    right: 0px;
+  }
+
+  ul ul li {
+    margin-left: 60px;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  ul ul li a.active {
+    font-weight: bold;
+  }
+}

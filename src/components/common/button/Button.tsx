@@ -1,11 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import Icon from '../icon/Icon';
 import Spinner from '../spinner';
 
 type Size = 'tiny' | 'regular' | 'large';
 type ButtonType = 'button' | 'submit' | 'reset';
-type Appearance = 'basic' | 'primary' | 'secondary' | 'cancel' | 'transparent';
+type Appearance = 'basic' | 'primary' | 'secondary' | 'transparent';
 
 interface ButtonProps {
   size?: Size;
@@ -14,7 +13,7 @@ interface ButtonProps {
   loading?: boolean;
   className?: string;
   disabled?: boolean;
-  children?: string;
+  children?: React.ReactNode;
   appearance?: Appearance;
   iconAlign?: 'left' | 'right';
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -36,23 +35,12 @@ const Button = (props: ButtonProps) => {
   } = props;
 
   const buttonClass = classNames({
-    ['btn']: true,
+    btn: true,
     [`btn--${size}`]: size,
     [`btn--${size}Square`]: !children,
     [`btn--${appearance}`]: appearance,
     [`btn--iconAlign=${iconAlign}`]: children && iconAlign,
     [`${className}`]: className,
-  });
-
-  const iconClass = classNames({
-    ['btn-icon']: true,
-    [`btn-icon--${iconAlign}`]: children && iconAlign,
-  });
-
-  const spinnerClass = classNames({
-    ['disabled']: disabled,
-    ['default']: ['basic', 'transparent'].includes(appearance),
-    ['white']: !['basic', 'transparent'].includes(appearance),
   });
 
   return (
@@ -66,7 +54,7 @@ const Button = (props: ButtonProps) => {
         </div>
       ) : (
         <>
-          {icon && <Icon></Icon>}
+          {/* {icon && <Icon></Icon>} */}
           {children}
         </>
       )}

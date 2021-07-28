@@ -7,7 +7,7 @@
   font-weight: bold;
   color: #ffffff;
   display: inline-block;
-  @include getFontSize("button");
+  @include getFontSize('button');
   transition: all 0.3s ease;
   cursor: pointer;
 
@@ -19,18 +19,18 @@
 
   // button styles
   @include m(primary) {
-    background-color: getColor("primary.base");
+    background-color: getColor('primary.base');
 
     &:hover:enabled {
-      background-color: getColor("primary.dark");
+      background-color: getColor('primary.dark');
     }
   }
 
   @include m(secondary) {
-    background-color: getColor("secondary.base");
+    background-color: getColor('secondary.base');
 
     &:hover:enable {
-      background-color: getColor("secondary.dark");
+      background-color: getColor('secondary.dark');
     }
   }
 
@@ -39,6 +39,15 @@
 
     &:hover:enable {
       background-color: $grey-100;
+    }
+  }
+
+  @include m(transparent) {
+    background-color: transparent;
+    color: black;
+
+    &:hover:enable {
+      background-color: transparent;
     }
   }
 
