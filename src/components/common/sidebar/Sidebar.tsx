@@ -53,14 +53,8 @@ const Sidebar = (props: SidebarProps) => {
 
             return (
               <li className="sidebar-nav__item" key={`item-${index}`}>
-                <NavLink
-                  exact
-                  to={navLink}
-                  className="sidebar-nav__link"
-                  activeClassName="sidebar-nav__link--active"
-                  activeStyle={{ color: 'red' }}
-                >
-                  <Icon name={icon} className="sidebar-nav__item__icon" />
+                <NavLink exact to={navLink} className="sidebar-nav__link" activeClassName="sidebar-nav__link--active">
+                  <Icon name={icon} className="sidebar-nav__icon" />
                   <span>{label}</span>
                 </NavLink>
               </li>

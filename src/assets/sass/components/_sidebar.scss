@@ -34,20 +34,18 @@
     display: flex;
     align-items: center;
 
-    .sidebar-nav__item__icon {
+    .sidebar-nav__icon {
       margin-right: 8px;
     }
-  }
 
-  @include m(active) {
-    font-weight: bold;
+    @include m(active) {
+      font-weight: bold;
+      color: $secondary-color;
 
-    .sidebar-nav__icon {
-      background: $secondary-color;
-    }
-
-    .sidebar-nav__icon svg path {
-      fill: #ffffff;
+      .sidebar-nav__icon {
+        background: $secondary-color;
+        color: $white;
+      }
     }
   }
 
