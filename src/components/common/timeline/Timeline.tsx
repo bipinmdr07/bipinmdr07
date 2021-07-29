@@ -7,6 +7,7 @@ type Experience = {
   date: string;
   company: string;
   place: string;
+  designation: string;
   description: string;
 };
 
@@ -22,6 +23,7 @@ const Timeline = (props: PropInterface) => (
           <div className="vertical-timeline-element">
             <h3>{experience.company}</h3>
             <h4>{experience.place}</h4>
+            <h5>{experience.designation}</h5>
             <p>{experience.description}</p>
           </div>
         </VerticalTimelineElement>
