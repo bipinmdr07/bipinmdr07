@@ -1,16 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import './public';
+
+import { render } from 'react-dom';
+import { StrictMode } from 'react';
+
+import RedBox from 'redbox-react';
+
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-import './public';
+import config from './config';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const renderComponent = (rootElement: HTMLElement) => {
+  render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+    rootElement
+  );
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const reactElement = document.getElementById('root');
+
+  if (reactElement) {
+    if (config.env === 'development') {
+      try {
+        renderComponent(reactElement);
+      } catch (e) {
+        render(<RedBox error={e} />, reactElement);
+      }
+    } else {
+      renderComponent(reactElement);
+    }
+  }
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

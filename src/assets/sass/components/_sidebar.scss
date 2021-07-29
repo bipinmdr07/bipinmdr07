@@ -40,7 +40,6 @@
 
     @include m(active) {
       font-weight: bold;
-      color: $secondary-color;
 
       .sidebar-nav__icon {
         background: $secondary-color;
