@@ -3,7 +3,16 @@ import classNames from 'classnames';
 import * as MaterialIcon from 'react-icons/md';
 import * as AntIcon from 'react-icons/ai';
 
-export type Name = 'close' | 'facebook' | 'instagram' | 'menu' | 'home' | 'timeline' | 'phonelink' | 'assignment';
+export type Name =
+  | 'close'
+  | 'facebook'
+  | 'instagram'
+  | 'menu'
+  | 'home'
+  | 'timeline'
+  | 'phonelink'
+  | 'assignment'
+  | 'star';
 type Appearance = 'default' | 'primary' | 'secondary';
 type Size = 'tiny' | 'regular' | 'large';
 
@@ -48,6 +57,9 @@ export const Icon = (props: IconProps) => {
       break;
     case 'assignment':
       SelectedIcon = <MaterialIcon.MdAssignment />;
+      break;
+    case 'star':
+      SelectedIcon = <MaterialIcon.MdStar />;
       break;
   }
 
