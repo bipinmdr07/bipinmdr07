@@ -1,0 +1,50 @@
+.timeline-container {
+  .vertical-timeline {
+    &:before {
+      background: $primary-color;
+    }
+
+    .vertical-timeline-element {
+      margin: 2em 0;
+
+      .vertical-timeline-element-icon {
+        background: $success-color;
+        color: $white;
+
+        -webkit-box-shadow: 0 0 0 4px $primary-color, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
+
+        box-shadow: 0 0 0 4px $primary-color, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
+      }
+
+      .vertical-timeline-element-content {
+        box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.4);
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.4);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.4);
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.75);
+          -webkit-box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.75);
+          -moz-box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.75);
+        }
+
+        .vertical-timeline-element-content-arrow {
+          border-right: 7px solid rgba(87, 87, 87, 0.4);
+        }
+      }
+
+      &.secondary {
+        .vertical-timeline-element-icon {
+          background: $secondary-color;
+          color: #fff;
+        }
+      }
+
+      &.hidden {
+        .vertical-timeline-element-content {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
