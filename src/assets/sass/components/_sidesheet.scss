@@ -1,0 +1,35 @@
+.sidesheet {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  @include e(container) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $white;
+    color: $grey-75;
+    width: 520px;
+    padding: 30px 25px;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    -webkit-animation: slide 0.4s forwards;
+    animation: slide 0.4s forwards;
+
+    @include m(small) {
+      width: 30vw;
+    }
+
+    @include m(regular) {
+      width: 50vw;
+    }
+
+    @include m(large) {
+      width: 70vw;
+    }
+  }
+}
