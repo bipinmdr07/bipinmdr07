@@ -5,7 +5,7 @@
     }
 
     .vertical-timeline-element {
-      margin: 2em 0;
+      margin: 0;
 
       .vertical-timeline-element-icon {
         background: $success-color;
@@ -17,6 +17,7 @@
       }
 
       .vertical-timeline-element-content {
+        margin-bottom: 2em;
         box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.4);
         -webkit-box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.4);
         -moz-box-shadow: 0px 0px 5px 1px rgba(87, 87, 87, 0.4);
