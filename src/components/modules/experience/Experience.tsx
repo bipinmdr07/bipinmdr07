@@ -1,33 +1,29 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import Timeline from 'components/common/timeline';
-import Sidesheet from 'components/common/sidesheet';
 
-const Experience = () => {
+function Experience() {
   const experiences = [
     {
       date: '01/2020 - present',
       company: 'Leapfrog Technology',
       place: 'Kathmandu, Nepal',
       designation: 'Software Engineer',
-      description:
-        'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
+      description: 'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
     },
     {
       date: '09/2018 - 01/2020',
       company: 'Leapfrog Technology',
       place: 'Kathmandu, Nepal',
       designation: 'Associate Software Engineer',
-      description:
-        'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
+      description: 'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
     },
     {
       date: '07/2018 - 09/2018',
       company: 'Leapfrog Technology',
       place: 'Kathmandu, Nepal',
       designation: 'Intern',
-      description:
-        'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
+      description: 'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
     },
     {
       date: '12/2017 - 06/2018',
@@ -36,8 +32,7 @@ const Experience = () => {
       designation: 'Junior Ruby on Rails Developer',
       mainSkills: ['ruby on rails', 'postgresql', 'TDD'],
       skills: ['ruby', 'ruby on rails', 'rspec', 'TDD', 'postgresql'],
-      description:
-        'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
+      description: 'I started my career in this Startup company as Web Developer. I was very glad to work here as Junior Ruby on Rails Developer.',
     },
   ];
 
@@ -58,6 +53,6 @@ const Experience = () => {
       </Timeline>
     </>
   );
-};
+}
 
 export default Experience;
