@@ -2,6 +2,10 @@ import Image from "next/image";
 
 import { Vortex } from "@/components/ui/vortex";
 import { Meteors } from "@/components/ui/meteors";
+import { HeroNav } from "@/components/ui/hero-nav";
+
+import { navs } from '@/constant'
+
 
 export default function Home() {
   return (
@@ -15,11 +19,13 @@ export default function Home() {
             className="rounded-full"
             priority
           />
-          <h2 className="text-white text-sm md:text-6xl font-bold text-center mt-12">
+          <h2 className="text-white text-xl md:text-6xl font-bold text-center mt-12">
             Bipin Manandhar
           </h2>
 
           <Meteors number={130} width={1920} />
+
+          <HeroNav navs={navs} />
       </Vortex>
     </div>
   )
