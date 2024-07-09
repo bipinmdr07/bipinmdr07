@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import { Vortex } from "@/components/ui/vortex";
-import { Meteors } from "@/components/ui/meteors";
-import { HeroNav } from "@/components/ui/hero-nav";
+import { Vortex } from "@/app/components/ui/vortex";
+import { Meteors } from "@/app/components/ui/meteors";
+import { HeroNav } from "@/app/components/ui/hero-nav";
 
 import { navs } from '@/constant'
 
