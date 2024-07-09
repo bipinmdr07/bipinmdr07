@@ -3,6 +3,7 @@
 import type { Nav } from "@/app/components/ui/hero-nav";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function Navbar({ navs }: { navs: Nav[] }) {
   const pathname = usePathname();
@@ -10,7 +11,10 @@ export default function Navbar({ navs }: { navs: Nav[] }) {
   return (
     <nav className="bg-gray-800 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link
+          href="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <img
             src="/bm-high-resolution-logo-transparent.png"
             className="h-8"
@@ -19,7 +23,7 @@ export default function Navbar({ navs }: { navs: Nav[] }) {
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Bipin
           </span>
-        </a>
+        </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
@@ -59,7 +63,7 @@ export default function Navbar({ navs }: { navs: Nav[] }) {
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-gray-800 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {navs.map(({ title, href }: Nav) => (
               <li key={title}>
-                <a
+                <Link
                   href={href}
                   className={clsx("block py-2 px-3 rounded md:p-0", {
                     "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500":
@@ -70,7 +74,7 @@ export default function Navbar({ navs }: { navs: Nav[] }) {
                   aria-current="page"
                 >
                   {title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
