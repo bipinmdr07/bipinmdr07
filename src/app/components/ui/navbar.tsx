@@ -1,6 +1,6 @@
 "use client";
 
-import type { Nav } from "@/components/hero-nav";
+import type { Nav } from "@/app/components/ui/hero-nav";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
@@ -44,9 +44,9 @@ export default function Navbar({ navs }: { navs: Nav[] }) {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
