@@ -22,10 +22,10 @@ const config: Config = {
           "70%": { opacity: "1" },
           "100%": {
             transform: "rotate(215deg) translateX(-500px)",
-            opacity: "0"
-          }
-        }
-      }
+            opacity: "0",
+          },
+        },
+      },
     },
   },
   plugins: [addVariablesForColors],
@@ -33,8 +33,9 @@ const config: Config = {
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, value]) => [`--${key}`, value]))
-
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, value]) => [`--${key}`, value]),
+  );
 
   addBase({
     ":root": newVars,
