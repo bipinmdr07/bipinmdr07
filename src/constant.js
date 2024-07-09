@@ -1,23 +1,22 @@
-
 export const navs = [
   {
     title: 'About',
-    pathname: '/about',
+    href: '/about',
     icon: ''
   },
   {
     title: 'Work',
-    pathname: '/work',
+    href: '/work',
     icon: ''
   },
   {
     title: 'Blog',
-    pathname: '/blog',
+    href: '/blog',
     icon: ''
   },
  {
     title: 'Contact',
-    pathname: '/contact',
+    href: '/contact',
     icon: ''
   }
 ]
