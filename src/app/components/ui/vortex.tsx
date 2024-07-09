@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion";
 
@@ -64,6 +64,7 @@ export const Vortex = (props: VortexProps) => {
       const ctx = canvas.getContext("2d");
 
       if (ctx) {
+        /* eslint-disable-next-line */
         resize(canvas, ctx);
         initParticles();
         draw(canvas, ctx);
@@ -188,21 +189,18 @@ export const Vortex = (props: VortexProps) => {
     return x > canvas.width || x < 0 || y > canvas.height || y < 0;
   };
 
-  const resize = useCallback(
-    (
-      canvas: HTMLCanvasElement,
-      /* ctx?: CanvasRenderingContext2D, */
-    ) => {
-      const { innerWidth, innerHeight } = window;
+  const resize = (
+    canvas: HTMLCanvasElement,
+    _ctx?: CanvasRenderingContext2D,
+  ) => {
+    const { innerWidth, innerHeight } = window;
 
-      canvas.width = innerWidth;
-      canvas.height = innerHeight;
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
 
-      center[0] = 0.5 * canvas.width;
-      center[1] = 0.5 * canvas.height;
-    },
-    [center],
-  );
+    center[0] = 0.5 * canvas.width;
+    center[1] = 0.5 * canvas.height;
+  };
 
   const renderGlow = (
     canvas: HTMLCanvasElement,
