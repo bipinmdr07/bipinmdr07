@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { cn } from "@/utils/cn";
-import React, { useEffect, useRef } from "react";
-import { createNoise3D } from "simplex-noise";
-import { motion } from "framer-motion";
+import { cn } from '@/utils/cn';
+import React, { useEffect, useRef } from 'react';
+import { createNoise3D } from 'simplex-noise';
+import { motion } from 'framer-motion';
 
 interface VortexProps {
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -39,7 +39,7 @@ export const Vortex = (props: VortexProps) => {
   const xOff = 0.00125;
   const yOff = 0.00125;
   const zOff = 0.0005;
-  const backgroundColor = props.backgroundColor || "#000000";
+  const backgroundColor = props.backgroundColor || '#000000';
   let tick = 0;
   const noise3D = createNoise3D();
   let particleProps = new Float32Array(particlePropsLength);
@@ -61,7 +61,7 @@ export const Vortex = (props: VortexProps) => {
     const canvas = canvasRef.current;
     const container = containerRef.current;
     if (canvas && container) {
-      const ctx = canvas.getContext("2d");
+      const ctx = canvas.getContext('2d');
 
       if (ctx) {
         /* eslint-disable-next-line */
@@ -174,7 +174,7 @@ export const Vortex = (props: VortexProps) => {
     ctx: CanvasRenderingContext2D,
   ) => {
     ctx.save();
-    ctx.lineCap = "round";
+    ctx.lineCap = 'round';
     ctx.lineWidth = radius;
     ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
     ctx.beginPath();
@@ -207,14 +207,14 @@ export const Vortex = (props: VortexProps) => {
     ctx: CanvasRenderingContext2D,
   ) => {
     ctx.save();
-    ctx.filter = "blur(8px) brightness(200%)";
-    ctx.globalCompositeOperation = "lighter";
+    ctx.filter = 'blur(8px) brightness(200%)';
+    ctx.globalCompositeOperation = 'lighter';
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();
 
     ctx.save();
-    ctx.filter = "blur(4px) brightness(200%)";
-    ctx.globalCompositeOperation = "lighter";
+    ctx.filter = 'blur(4px) brightness(200%)';
+    ctx.globalCompositeOperation = 'lighter';
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();
   };
@@ -224,16 +224,16 @@ export const Vortex = (props: VortexProps) => {
     ctx: CanvasRenderingContext2D,
   ) => {
     ctx.save();
-    ctx.globalCompositeOperation = "lighter";
+    ctx.globalCompositeOperation = 'lighter';
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();
   };
 
   useEffect(() => {
     setup();
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       const canvas = canvasRef.current;
-      const ctx = canvas?.getContext("2d");
+      const ctx = canvas?.getContext('2d');
       if (canvas && ctx) {
         resize(canvas, ctx);
       }
@@ -241,17 +241,17 @@ export const Vortex = (props: VortexProps) => {
   }, [setup, resize]);
 
   return (
-    <div className={cn("relative h-full w-full", props.containerClassName)}>
+    <div className={cn('relative h-full w-full', props.containerClassName)}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         ref={containerRef}
-        className="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
+        className="absolute inset-0 z-0 flex h-full w-full items-center justify-center bg-transparent"
       >
         <canvas ref={canvasRef}></canvas>
       </motion.div>
 
-      <div className={cn("relative z-10", props.className)}>
+      <div className={cn('relative z-10', props.className)}>
         {props.children}
       </div>
     </div>

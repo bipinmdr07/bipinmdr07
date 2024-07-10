@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export type Nav = {
   title: string;
@@ -8,17 +8,17 @@ export type Nav = {
 
 export const HeroNav = ({ navs }: { navs: Nav[] }) => {
   return (
-    <div className="grid sm:flex gap-3 mt-8">
+    <div className="mt-8 grid gap-3 sm:flex">
       {navs.map((nav, index) => (
         <div
-          className="py-2.5 px-3 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+          className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg px-3 py-2.5 text-sm font-medium shadow-sm disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
           key={index}
         >
           <Link
             href={nav.href}
-            className="flex px-3 items-center justify-center w-full h-full hover:text-violet-400"
+            className="flex h-full w-full items-center justify-center px-3 hover:text-violet-400"
           >
-            <div className="flex items-center justify-center w-full h-full">
+            <div className="flex h-full w-full items-center justify-center">
               <span className="text-sm font-bold">{nav.title}</span>
             </div>
           </Link>
