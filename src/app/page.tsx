@@ -15,11 +15,11 @@ export default function Home() {
         className="flex h-full w-full flex-col items-center justify-center px-2 py-4 md:px-10"
       >
         <Image
-          src="/avatar.jpg"
+          src="/icon.png"
           alt="avatar"
           width={300}
           height={300}
-          className="rounded-full"
+          className="rounded-full opacity-75"
           priority
         />
         <h2 className="mt-12 text-center text-xl font-bold text-white md:text-6xl">
