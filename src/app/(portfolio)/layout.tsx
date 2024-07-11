@@ -4,10 +4,10 @@ import { navs } from '@/constant';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container mx-auto max-w-screen-xl px-4">
+    <div className="mx-auto">
       <Navbar navs={navs} />
 
-      <div className="mt-20">{children}</div>
+      <div>{children}</div>
     </div>
   );
 }
