@@ -28,7 +28,7 @@ export default function MobileMenu({ pathname }: { pathname: string }) {
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
-          <DrawerHeader className={"list-none space-y-6"}>
+          <DrawerHeader className={"list-none space-y-6 sm:text-center"}>
             {ROUTES.map((item) => {
               return (
                 <li key={item.id}>
