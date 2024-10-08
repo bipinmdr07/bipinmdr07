@@ -12,8 +12,8 @@ import MobileMenu from "./MobileMenu"
 export default function Menu() {
   const pathname = usePathname()
 
-  return <header className={cn("fixed z-50 left-0 right-0 bg-background border-b border-border/25")}>
-    <nav className="container ppy-4 flex justify-between items-center">
+  return <header className={cn("fixed z-50 left-0 right-0", pathname !== '/' && "bg-background border-b border-border/25")}>
+    <nav className="container py-4 flex justify-between items-center">
       {/* Logo */}
       <Link href={'/'}>
         <Image
