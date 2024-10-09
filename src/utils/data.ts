@@ -24,4 +24,28 @@ export const ROUTES = Object.freeze([
     name: 'Contact',
     path: '/contact',
   },
-])
+]);
+
+// social media details with icon
+export const SOCIAL_MEDIA = Object.freeze([
+  {
+    id: 1,
+    name: 'Instagram',
+    icon: '/int.png',
+  },
+  {
+    id: 2,
+    name: 'Facebook',
+    icon: '/face.png',
+  },
+  {
+    id: 3,
+    name: 'LinkedIn',
+    icon: '/in.png',
+  },
+  {
+    id: 4,
+    name: 'Github',
+    icon: '/github.png',
+  },
+]);
