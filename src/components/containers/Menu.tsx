@@ -5,10 +5,8 @@ import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
-import { Button } from '../ui/button';
 import MobileMenu from './MobileMenu';
-import { MotionImage } from '@/utils/motionTags';
+import { MotionImage, MotionButton, MotionList } from '@/utils/motionTags';
 import { transition, variants } from '@/utils/framer_variants';
 
 export default function Menu() {
@@ -34,21 +32,37 @@ export default function Menu() {
 
         {/* web menus */}
         <ul className='hidden items-center gap-6 text-[17px] font-medium md:flex'>
-          {ROUTES.map((route) => {
+          {ROUTES.map((route, i) => {
             return (
-              <li key={route.id}>
+              <MotionList
+                key={route.id}
+                initial='initial'
+                animate='animate'
+                variants={variants.moveDown}
+                transition={{
+                  ...transition.moveDown,
+                  delay: i * 0.2,
+                }}
+              >
                 <Link href={route.path} className={cn('hover:text-primary', pathname === route.path && 'text-primary')}>
                   {route.name}
                 </Link>
-              </li>
+              </MotionList>
             );
           })}
         </ul>
 
         {/* button */}
-        <Button variant='outline' className='hidden md:inline-block'>
+        <MotionButton
+          initial='initial'
+          animate='animate'
+          variants={variants.moveLeft}
+          transition={transition.moveLeft}
+          variant='outline'
+          className='hidden md:inline-block'
+        >
           Get in Touch
-        </Button>
+        </MotionButton>
 
         {/* mobile menu */}
         <MobileMenu pathname={pathname} />
