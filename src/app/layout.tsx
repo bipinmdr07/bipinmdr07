@@ -1,26 +1,16 @@
-import type { Metadata } from "next";
-import { Anek_Latin } from "next/font/google"
-/* import localFont from "next/font/local"; */
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import Menu from "@/components/containers/Menu";
+import './globals.css';
+import type { Metadata } from 'next';
 
-/* const geistSans = localFont({
-*   src: "./fonts/GeistVF.woff",
-*   variable: "--font-geist-sans",
-*   weight: "100 900",
-* });
-* const geistMono = localFont({
-*   src: "./fonts/GeistMonoVF.woff",
-*   variable: "--font-geist-mono",
-*   weight: "100 900",
-* }); */
+import { Anek_Latin } from 'next/font/google';
+import { cn } from '@/lib/utils';
+import Menu from '@/components/containers/Menu';
+import Footer from '@/components/containers/Footer';
 
-const anek = Anek_Latin({ subsets: ["latin"] })
+const anek = Anek_Latin({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Bipin Manandhar = Portfolio",
-  description: "My Portfolio",
+  title: 'Bipin Manandhar = Portfolio',
+  description: 'My Portfolio',
 };
 
 export default function RootLayout({
@@ -29,14 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={cn("bg-background", anek.className)}
-      >
+    <html lang='en'>
+      <body className={cn('bg-background', anek.className)}>
         <Menu />
-        <main>
-        {children}
-        </main>
+
+        <main className='min-h-screen'>{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
