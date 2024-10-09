@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Luckiest_Guy } from 'next/font/google';
 import { DownloadIcon } from 'lucide-react';
 import { SOCIAL_MEDIA } from '@/utils/data';
+import { Icon } from '@iconify/react';
 
 const luck = Luckiest_Guy({
   subsets: ['latin'],
@@ -64,22 +65,20 @@ export default function Home() {
         <div className='bottom-6 left-2 flex items-center gap-x-3 md:absolute'>
           {SOCIAL_MEDIA.map((item, i) => {
             return (
-              <MotionImage
-                whileHover={{ scale: 1.1 }}
+              <MotionDiv
+                whileHover={{ scale: 1.2 }}
                 initial='initial'
                 animate='animate'
                 variants={variants.moveUp}
                 transition={{
                   ...transition.moveUp,
-                  delay: 0.3 * i,
+                  delay: 0.2 * i,
                 }}
                 key={item.id}
-                src={item.icon}
-                alt={item.name}
-                height={25}
-                width={25}
-                className='max-h-full cursor-pointer object-cover'
-              />
+                className='grid place-items-center rounded-full bg-accent-foreground'
+              >
+                <Icon icon={item.icon} className='cursor-pointer text-4xl' fill='#000000' />
+              </MotionDiv>
             );
           })}
         </div>

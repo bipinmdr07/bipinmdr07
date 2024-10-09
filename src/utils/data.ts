@@ -31,21 +31,21 @@ export const SOCIAL_MEDIA = Object.freeze([
   {
     id: 1,
     name: 'Instagram',
-    icon: '/int.png',
+    icon: 'mdi:instagram',
   },
   {
     id: 2,
     name: 'Facebook',
-    icon: '/face.png',
+    icon: 'mdi:facebook',
   },
   {
     id: 3,
     name: 'LinkedIn',
-    icon: '/in.png',
+    icon: 'mdi:linkedin',
   },
   {
     id: 4,
     name: 'Github',
-    icon: '/github.png',
+    icon: 'mdi:github',
   },
 ]);
