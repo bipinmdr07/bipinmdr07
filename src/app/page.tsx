@@ -75,7 +75,6 @@ export default function Home() {
                   delay: 0.2 * i,
                 }}
                 key={item.id}
-                className='grid place-items-center rounded-full bg-accent-foreground'
               >
                 <Icon icon={item.icon} className='cursor-pointer text-4xl' fill='#000000' />
               </MotionDiv>
