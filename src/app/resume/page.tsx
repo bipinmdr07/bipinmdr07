@@ -1,3 +1,4 @@
+import { MotionTabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionButton, MotionDiv, MotionImage } from '@/utils/motionTags';
@@ -13,11 +14,11 @@ export default function page() {
               animate='animate'
               variants={variants.scale}
               transition={transition.scale}
-              src='/hero.png'
+              src='/pp.jpg'
               width={150}
               height={150}
               alt='avatar'
-              className='w-28 md:w-36'
+              className='w-28 rounded-full md:w-36'
             />
             <MotionDiv
               initial='initial'
@@ -44,6 +45,37 @@ export default function page() {
             Senior Software Engineer
           </MotionButton>
         </div>
+
+        <MotionTabs
+          initial='initial'
+          animate='animate'
+          variants={variants.moveUp}
+          transition={transition.moveUp}
+          defaultValue='about'
+          className='mt-10 leading-7'
+        >
+          <TabsList>
+            <TabsTrigger value='about'>About</TabsTrigger>
+            <TabsTrigger value='skills'>Skills</TabsTrigger>
+            <TabsTrigger value='experience'>Experience</TabsTrigger>
+          </TabsList>
+          <TabsContent value='about'>
+            <h6>Who I&apos;m</h6>
+            <p className='mt-2 text-accent-foreground'>
+              Skilled Software Engineer with 6+ years of hands-on experience building, testing, optimizing and
+              maintaining web-based applications for diverse industry organizations. Proficient in software development,
+              including coding, debugging, testing, and troubleshooting. Knowledgeable in identifying core technical
+              problems, finding better solutions to existing problems, and applying the sound and optimized way to solve
+              the problem in an organized way to achieve the desired result. Strong communication skills with the
+              ability to work in a team environment and independently.
+            </p>
+            <p className='mt-2 text-accent-foreground'>
+              Driven individual with the ability to adapt to any situation and proven potential to grow and learn.
+              Highly enthusiastic and always ready to take on new challenges when it comes to learning new technologies
+              and solving real-world problems.
+            </p>
+          </TabsContent>
+        </MotionTabs>
       </div>
     </>
   );
