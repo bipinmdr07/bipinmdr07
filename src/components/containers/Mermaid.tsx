@@ -1,16 +1,15 @@
 'use client';
 
-import { ReactElement, useCallback, useEffect, useState } from 'react';
+import React, { ReactElement, useCallback, useEffect, useState } from 'react';
 import mermaid, { RenderResult } from 'mermaid';
-import React from 'react';
 
 export interface MermaidDiagramProps {
   children: string;
   id?: string;
   testId?: string;
   className?: string;
-  onClick?: (event: MouseEvent) => void;
-  onError?: (error: any) => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+  onError?: (error: unknown) => void;
 }
 
 const Mermaid = (props: MermaidDiagramProps): ReactElement => {
@@ -67,7 +66,7 @@ const Mermaid = (props: MermaidDiagramProps): ReactElement => {
       try {
         const rr = await mermaid.render(`${container_id}-svg`, diagram_text);
         setRenderResult(rr);
-      } catch (e: any) {
+      } catch (e: unknown) {
         props.onError?.(e);
       }
     })();
