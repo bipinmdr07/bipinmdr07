@@ -1,9 +1,41 @@
+import Mermaid from '@/components/containers/Mermaid';
 import { MotionTabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionButton, MotionDiv, MotionImage } from '@/utils/motionTags';
 
 export default function page() {
+  const gitString = `
+---
+title: Work experience
+---
+gitGraph BT:
+    commit id: "Start"
+    commit id: "Jan 01, 2018"
+    branch "Four MB"
+    commit id: "-" tag: "Junior RoR Developer"
+    checkout Experience
+    merge "Four MB" id: "Jun 09, 2018"
+    commit id: "Jun 11, 2018"
+    branch "Leapfrog Technology"
+    commit id: "Intern" tag: "SE Intern"
+    checkout Experience
+    merge "Leapfrog Technology" id: "Sept 11, 2018"
+    checkout "Leapfrog Technology"
+    commit id: "ASE" tag: "Associate Software Engineer"
+    checkout Experience
+    merge "Leapfrog Technology" id: "Dec 12, 2019"
+    checkout "Leapfrog Technology"
+    commit id: "SE" tag: "Software Engineer"
+    checkout Experience
+    merge "Leapfrog Technology" id: "Dec 16, 2019"
+    checkout "Leapfrog Technology"
+    commit id: "SSE" tag: "Senior Software Engineer"
+    commit id: "." tag: "current"
+    checkout Experience
+    commit id: "current"
+`;
+
   return (
     <>
       <div className={cn('mx-auto min-h-screen max-w-4xl pb-4 pt-32 2xl:pt-60')}>
@@ -59,6 +91,7 @@ export default function page() {
             <TabsTrigger value='skills'>Skills</TabsTrigger>
             <TabsTrigger value='experience'>Experience</TabsTrigger>
           </TabsList>
+
           <TabsContent value='about'>
             <h6>Who I&apos;m</h6>
             <p className='mt-2 text-accent-foreground'>
@@ -74,6 +107,14 @@ export default function page() {
               Highly enthusiastic and always ready to take on new challenges when it comes to learning new technologies
               and solving real-world problems.
             </p>
+          </TabsContent>
+
+          <TabsContent value='skills' className='bg-transparent'>
+            <h6>Skills</h6>
+          </TabsContent>
+
+          <TabsContent value='experience' className='bg-transparent'>
+            <Mermaid className='flex justify-center'>{gitString}</Mermaid>
           </TabsContent>
         </MotionTabs>
       </div>

@@ -3,64 +3,74 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --background: 246 46% 37%;
-        --foreground: 210 40% 96.1%;
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
-        --primary: 42 79% 54%;
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
-        --accent: 247 50% 28%;
-        --accent-foreground: 246 64% 75%;
-        --border: 247 91% 68%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
-        --radius: 0.5rem;
-        --destruction: 0 96% 74%;
-    }
+  :root {
+    --background: 246 46% 37%;
+    --foreground: 210 40% 96.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 42 79% 54%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 247 50% 28%;
+    --accent-foreground: 246 64% 75%;
+    --border: 247 91% 68%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --destruction: 0 96% 74%;
+  }
 }
 
 @layer base {
-    * {
-        @apply border-border;
-    }
+  * {
+    @apply border-border;
+  }
 
-    body {
-        @apply bg-background text-foreground;
-    }
+  body {
+    @apply bg-background text-foreground;
+  }
 
-    h1 {
-        @apply md:text-7xl text-5xl !leading-[1.10];
-    }
+  h1 {
+    @apply text-5xl !leading-[1.10] md:text-7xl;
+  }
 
-    h1 span, h3 span {
-        @apply text-primary;
-    }
+  h1 span,
+  h3 span {
+    @apply text-primary;
+  }
 
-    h3 {
-        @apply md:text-3xl text-2xl font-semibold;
-    }
+  h3 {
+    @apply text-2xl font-semibold md:text-3xl;
+  }
 
-    h5  {
-        @apply text-accent-foreground font-medium text-lg;
-    }
+  h5 {
+    @apply text-lg font-medium text-accent-foreground;
+  }
 
-    h6 {
-        @apply text-foreground font-medium text-lg;
-    }
+  h6 {
+    @apply text-lg font-medium text-foreground;
+  }
 
-    p {
-        @apply sm:text-base text-sm;
-    }
+  p {
+    @apply text-sm sm:text-base;
+  }
 
-    li, p, button, a, h4, h5 {
-        @apply tracking-wider;
-    }
+  li,
+  p,
+  button,
+  a,
+  h4,
+  h5 {
+    @apply tracking-wider;
+  }
+
+  pre.mermaid {
+    font-family: 'trebuchet ms', verdana, arial;
+  }
 }
 
 button:disabled {
-    @apply opacity-50;
+  @apply opacity-50;
 }
