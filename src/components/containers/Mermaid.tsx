@@ -9,7 +9,7 @@ export interface MermaidDiagramProps {
   id?: string;
   testId?: string;
   className?: string;
-  onClick?: (event: MouseEvent<HTMLElement>) => void;
+  onClick?: (event: MouseEvent) => void;
   onError?: (error: any) => void;
 }
 
@@ -43,7 +43,7 @@ const Mermaid = (props: MermaidDiagramProps): ReactElement => {
         mainBranchName: 'Experience',
       },
     });
-  }, []);
+}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // hook to track updates to the component ref, compatible with useEffect unlike useRef
   const updateDiagramRef = useCallback((elem: HTMLDivElement) => {
