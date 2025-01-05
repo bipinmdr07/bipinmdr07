@@ -21,7 +21,6 @@ const Mermaid = (props: MermaidDiagramProps): ReactElement => {
 
   // initialize mermaid here, but beware that it gets called once for every instance of the component
   useEffect(() => {
-    alert('initializing mermaid');
     // wait for page to load before initializing mermaid
     mermaid.initialize({
       look: 'handDrawn',
