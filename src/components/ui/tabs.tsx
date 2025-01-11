@@ -6,7 +6,7 @@ import * as TabsPrimitive from '@radix-ui/react-tabs';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
-export const MotionTabs = motion(TabsPrimitive.Root);
+export const MotionTabs = motion.create(TabsPrimitive.Root);
 
 export const TabsList = forwardRef<HTMLDivElement, TabsPrimitive.TabsListProps>(({ className, ...props }, ref) => (
   <TabsPrimitive.List
@@ -48,4 +48,4 @@ export const TabsContent = forwardRef<HTMLDivElement, TabsPrimitive.TabsContentP
 );
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 
-export const MotionTabsContent = motion(TabsContent);
+export const MotionTabsContent = motion.create(TabsContent);

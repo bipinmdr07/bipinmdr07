@@ -4,10 +4,10 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-export const MotionImage = motion(Image);
+export const MotionImage = motion.create(Image);
 
-export const MotionDiv = motion(motion.div);
+export const MotionDiv = motion.create(motion.div);
 
-export const MotionList = motion(motion.li);
+export const MotionList = motion.create(motion.li);
 
-export const MotionButton = motion(Button);
+export const MotionButton = motion.create(Button);

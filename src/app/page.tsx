@@ -20,7 +20,7 @@ export default function Home() {
           animate='animate'
           variants={variants.rise}
           transition={transition.rise}
-          className='absolute -left-28 top-96 flex -rotate-90 items-center gap-x-4 text-accent-foreground md:-left-8 md:top-auto'
+          className="absolute flex items-center gap-x-4 md:-rotate-90 sm:rotate-0  -left-28 md:top-auto top-96 sm:top text-accent-foreground"
         >
           <MotionDiv
             initial={{ scale: 0.8 }}
@@ -34,7 +34,7 @@ export default function Home() {
           >
             <div className='size-3 rounded-full bg-accent-foreground'></div>
           </MotionDiv>
-          <h4 className='text-2xl'>Software Engineer</h4>
+          <h4 className='text-2xl'>Senior Software Engineer</h4>
         </MotionDiv>
         <MotionDiv
           initial='initial'
