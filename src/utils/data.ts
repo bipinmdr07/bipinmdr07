@@ -102,4 +102,9 @@ export const EXPERTISE_AREA = Object.freeze([
     name: 'Unit Testing',
     icon: 'mdi:test-tube',
   },
+  {
+    id: 7,
+    name: 'System Design',
+    icon: 'mdi:aws'
+  }
 ])
