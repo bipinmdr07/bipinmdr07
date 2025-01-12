@@ -1,7 +1,7 @@
 import Mermaid from '@/components/containers/Mermaid';
 import { MotionTabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
-import { EXPERTISE_AREA } from '@/utils/data';
+import { EXPERTISE_AREA, LANGUAGES_AND_TOOLS } from '@/utils/data';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionButton, MotionDiv, MotionImage } from '@/utils/motionTags';
 import  {Icon} from '@iconify/react'
@@ -129,6 +129,24 @@ transition={{ ...transition.moveRight, delay: i * 0.6 }}
                       &nbsp;
                       {expertise.name.split(" ").slice(1).join(' ')}
                     </h4>
+                  </MotionDiv>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h6 className="mt-12 mb-6">Languages and Tools</h6>
+              <div className="flex gap-6 flex-wrap">
+                {LANGUAGES_AND_TOOLS.map((tool, i) => (
+                  <MotionDiv key={i}
+                    initial="initial"
+                    animate="animate"
+                    variants={variants.moveDown}
+                    transition={{ ...transition.moveDown,
+                                  delay: i * 0.2
+                    }}
+                    title={tool.name}
+                  >
+                    <Icon icon={tool.icon} width={35} height={35} />
                   </MotionDiv>
                 ))}
               </div>

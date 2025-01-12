@@ -108,3 +108,147 @@ export const EXPERTISE_AREA = Object.freeze([
     icon: 'mdi:aws'
   }
 ])
+
+// languages and tools
+export const LANGUAGES_AND_TOOLS = Object.freeze([
+  {
+    name: 'HTML5',
+    icon: 'mdi:language-html5'
+  },
+  {
+    name: 'CSS3',
+    icon: 'mdi:language-css3'
+  },
+  {
+    name: 'Bootstrap',
+    icon: 'mdi:bootstrap'
+  },
+  {
+    name: 'Tailwind',
+    icon: 'mdi:tailwind'
+  },
+  {
+    name: 'JQuery',
+    icon: 'mdi:jquery'
+  },
+  {
+    name: 'Javascript',
+    icon: 'mdi:language-javascript'
+  },
+  {
+    name: 'Typescript',
+    icon: 'mdi:language-typescript'
+  },
+  {
+    name: 'React',
+    icon: 'mdi:react'
+  },
+  {
+    name: 'Redux',
+    icon: 'cib:redux'
+  },
+  {
+    name: 'React Query',
+    icon: 'simple-icons:reactquery'
+  },
+  {
+    name: 'NextJS',
+    icon: 'catppuccin:next'
+  },
+  {
+    name: 'VueJS',
+    icon: 'mdi:vuejs'
+  },
+  {
+    name: 'Vuetify',
+    icon: 'mdi:vuetify'
+  },
+  {
+    name: 'PolymerJS',
+    icon: 'mdi:polymer'
+  },
+  {
+    name: 'LitElement',
+    icon: 'simple-icons:lit'
+  },
+  {
+    name: 'Ruby',
+    icon: 'mdi:language-ruby'
+  },
+  {
+    name: 'Ruby on Rails',
+    icon: 'mdi:language-ruby-on-rails'
+  },
+  {
+    name: 'Python',
+    icon: 'mdi:language-python'
+  },
+  {
+    name: 'Nodejs',
+    icon: 'mdi:nodejs'
+  },
+  {
+    name: 'ExpressJS',
+    icon: 'lineicons:expressjs'
+  },
+  {
+    name: 'MySQL',
+    icon: 'cib:mysql'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: 'cib:postgresql'
+  },
+  {
+    name: 'MongoDB',
+    icon: 'devicon-plain:mongodb-wordmark'
+  },
+  {
+    name: 'Mongoose',
+    icon: 'simple-icons:mongoose'
+  },
+  {
+    name: 'Firebase',
+    icon: 'cib:firebase'
+  },
+  {
+    name: 'DynamoDB',
+    icon: 'simple-icons:amazondynamodb'
+  },
+  {
+    name: 'Git',
+    icon: 'mdi:git'
+  },
+  {
+    name: 'GitHub',
+    icon: 'mdi:github'
+  },
+  {
+    name: 'GitLab',
+    icon: 'mdi:gitlab'
+  },
+  {
+    name: 'AWS',
+    icon: 'mdi:aws'
+  },
+  {
+    name: 'Nginx',
+    icon: 'cib:nginx'
+  },
+  {
+    name: 'CircleCI',
+    icon: 'cib:circleci',
+  },
+  {
+    name: 'Jest',
+    icon: 'cib:jest',
+  },
+  {
+    name: 'Bash Script',
+    icon: 'mdi:bash',
+  },
+  {
+    name: 'Figma',
+    icon: 'cib:figma'
+  },
+])
