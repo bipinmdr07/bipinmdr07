@@ -75,43 +75,31 @@ export const EXPERTISE_AREA = Object.freeze([
   {
     id: 1,
     name: 'Web Development',
-    icon: '',
-    description: '',
-    percentage: ''
+    icon: 'mdi:web',
   },
   {
     id: 2,
     name: 'API Development',
-    icon: '',
-    description: '',
-    percentage: ''
+    icon: 'mdi:api',
   },
   {
     id: 3,
     name: 'Mobile Development',
-    icon: '',
-    description: '',
-    percentage: ''
+    icon: 'mdi:cellphone',
   },
   {
     id: 4,
     name: 'UI/UX Design',
-    icon: '',
-    description: '',
-    percentage: ''
+    icon: 'mdi:pencil-ruler',
   },
   {
     id: 5,
     name: 'Performance Optimization',
-    icon: '',
-    description: '',
-    percentage: ''
+    icon: 'mdi:speedometer',
   },
   {
     id: 6,
     name: 'Unit Testing',
-    icon: '',
-    description: '',
-    percentage: ''
+    icon: 'mdi:test-tube',
   },
 ])

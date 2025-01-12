@@ -1,8 +1,10 @@
 import Mermaid from '@/components/containers/Mermaid';
 import { MotionTabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
+import { EXPERTISE_AREA } from '@/utils/data';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionButton, MotionDiv, MotionImage } from '@/utils/motionTags';
+import  {Icon} from '@iconify/react'
 
 export default function page() {
   const gitString = `
@@ -110,7 +112,27 @@ gitGraph BT:
           </TabsContent>
 
           <TabsContent value='skills' className='bg-transparent'>
-            <h6>Skills</h6>
+            <div>
+              <h6 className="mb-6">Expertise Area</h6>
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
+                {EXPERTISE_AREA.map((expertise, i) => (
+                  <MotionDiv key={expertise.id}
+                    initial="initial"
+                    animate="animate"
+                    variants={variants.moveRight}
+transition={{ ...transition.moveRight, delay: i * 0.6 }}
+                    className="bg-accent p-5 cursor-pointer group rounded-3xl flex flex-col items-center"
+                  >
+                    <Icon icon={expertise.icon} width={55} height={55} className="mb-6" />
+                    <h4>
+                      <span>{expertise.name.split(" ")[0]}</span>
+                      &nbsp;
+                      {expertise.name.split(" ").slice(1).join(' ')}
+                    </h4>
+                  </MotionDiv>
+                ))}
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value='experience' className='bg-transparent'>
