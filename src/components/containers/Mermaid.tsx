@@ -41,7 +41,7 @@ const Mermaid = (props: MermaidDiagramProps): ReactElement => {
         mainBranchName: 'Experience',
       },
     });
-}, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // hook to track updates to the component ref, compatible with useEffect unlike useRef
   const updateDiagramRef = useCallback((elem: HTMLDivElement) => {
@@ -69,7 +69,7 @@ const Mermaid = (props: MermaidDiagramProps): ReactElement => {
         props.onError?.(e);
       }
     })();
-  }, [diagram_text]);
+  }, [diagram_text, container_id, props]);
 
   // render container (div) to hold diagram (nested SVG)
   return (
