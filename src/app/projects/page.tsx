@@ -1,13 +1,16 @@
 'use client';
 
+import { ReactNode } from 'react';
+import dompurify from 'dompurify';
+import { Icon } from '@iconify/react';
+
 import { Badge } from '@/components/ui/badge';
 import RenderOnCondition from '@/components/ui/renderOnCondition';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { createMarkup } from '@/utils/createMarkup';
+
 import { PROJECTS } from '@/utils/data';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionDiv } from '@/utils/motionTags';
-import { Icon } from '@iconify/react';
 
 export default function Projects() {
   return (
@@ -38,18 +41,20 @@ export default function Projects() {
               <h2 className='text-6xl font-semibold text-primary'>{index < 10 ? `0${index}` : index}</h2>
               <h3>{project.title}</h3>
               <p className='w-10/12 text-accent-foreground'>
-                <div dangerouslySetInnerHTML={createMarkup(project?.html)}></div>
+                <div dangerouslySetInnerHTML={{ __html: dompurify.sanitize(project?.html) }}></div>
               </p>
               Contribution:
               <ol>
-                {project?.contributions?.map((item, index) => (
-                  <li key={index}>
-                    <p dangerouslySetInnerHTML={createMarkup(item)} />
-                  </li>
-                ))}
+                {project?.contributions?.map(
+                  (item, index): ReactNode => (
+                    <li key={index}>
+                      <p dangerouslySetInnerHTML={{ __html: dompurify.sanitize(item) }} />
+                    </li>
+                  )
+                )}
               </ol>
               <div className='mt-2 space-x-2 font-semibold tracking-wider text-primary'>
-                {project?.tech?.map((item) => {
+                {project?.tech?.map((item): ReactNode => {
                   return (
                     <Badge key='{item}' variant='outline' className='text-base text-primary'>
                       {item}
