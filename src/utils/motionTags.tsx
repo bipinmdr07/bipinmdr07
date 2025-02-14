@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const MotionImage = motion.create(Image);
 
-export const MotionDiv = motion.create(motion.div);
+export const MotionDiv = motion.div;
 
 export const MotionList = motion.create(motion.li);
 
