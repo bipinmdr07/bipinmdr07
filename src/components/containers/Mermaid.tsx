@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactElement, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import mermaid, { RenderResult } from 'mermaid';
 
 export interface MermaidDiagramProps {
@@ -12,7 +12,7 @@ export interface MermaidDiagramProps {
   onError?: (error: unknown) => void;
 }
 
-const Mermaid = (props: MermaidDiagramProps): ReactElement<any> => {
+const Mermaid = (props: MermaidDiagramProps): JSX.Element => {
   const [element, setElement] = useState<HTMLDivElement>();
   const [render_result, setRenderResult] = useState<RenderResult>();
 
