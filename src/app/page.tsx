@@ -20,7 +20,7 @@ export default function Home() {
           animate='animate'
           variants={variants.rise}
           transition={transition.rise}
-          className="absolute flex items-center gap-x-4 md:-rotate-90 sm:rotate-0  -left-28 md:top-auto top-96 sm:top text-accent-foreground"
+          className='sm:top absolute -left-28 top-96 flex items-center gap-x-4 text-accent-foreground sm:rotate-0 md:top-auto md:-rotate-90'
         >
           <MotionDiv
             initial={{ scale: 0.8 }}
