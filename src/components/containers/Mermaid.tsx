@@ -12,7 +12,7 @@ export interface MermaidDiagramProps {
   onError?: (error: unknown) => void;
 }
 
-const Mermaid = (props: MermaidDiagramProps): ReactElement => {
+const Mermaid = (props: MermaidDiagramProps): ReactElement<any> => {
   const [element, setElement] = useState<HTMLDivElement>();
   const [render_result, setRenderResult] = useState<RenderResult>();
 

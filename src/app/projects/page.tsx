@@ -45,7 +45,7 @@ export default function Projects() {
               <div className='mt-2 space-x-2 font-semibold tracking-wider text-primary'>
                 {project?.tech?.map((item): ReactNode => {
                   return (
-                    <Badge key='{item}' variant='outline' className='text-base text-primary'>
+                    <Badge key={item} variant='outline' className='text-base text-primary'>
                       {item}
                     </Badge>
                   );

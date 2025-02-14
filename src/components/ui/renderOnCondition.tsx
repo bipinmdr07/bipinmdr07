@@ -1,7 +1,9 @@
-const RenderOnCondition = ({ condition, children }: { condition: boolean, children: JSX.Element }) => {
-  if (!condition) return null
+import type { JSX } from 'react';
 
-  return children
-}
+const RenderOnCondition = ({ condition, children }: { condition: boolean; children: JSX.Element }) => {
+  if (!condition) return null;
 
-export default RenderOnCondition
+  return children;
+};
+
+export default RenderOnCondition;
