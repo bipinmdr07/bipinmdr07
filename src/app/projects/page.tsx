@@ -1,7 +1,6 @@
 'use client';
 
 import { ReactNode } from 'react';
-import dompurify from 'dompurify';
 import { Icon } from '@iconify/react';
 
 import { Badge } from '@/components/ui/badge';
@@ -40,19 +39,9 @@ export default function Projects() {
             <div className='flex-1 space-y-3'>
               <h2 className='text-6xl font-semibold text-primary'>{index < 10 ? `0${index}` : index}</h2>
               <h3>{project.title}</h3>
-              <p className='w-10/12 text-accent-foreground'>
-                <div dangerouslySetInnerHTML={{ __html: dompurify.sanitize(project?.html) }}></div>
-              </p>
+              <p className='w-10/12 text-accent-foreground'>{project.description}</p>
               Contribution:
-              <ol>
-                {project?.contributions?.map(
-                  (item, index): ReactNode => (
-                    <li key={index}>
-                      <p dangerouslySetInnerHTML={{ __html: dompurify.sanitize(item) }} />
-                    </li>
-                  )
-                )}
-              </ol>
+              <ol>{project?.contributions?.map((item, index): ReactNode => <li key={index}>{item}</li>)}</ol>
               <div className='mt-2 space-x-2 font-semibold tracking-wider text-primary'>
                 {project?.tech?.map((item): ReactNode => {
                   return (
