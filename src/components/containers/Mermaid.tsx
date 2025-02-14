@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, JSX } from 'react';
 import mermaid, { RenderResult } from 'mermaid';
 
 export interface MermaidDiagramProps {
