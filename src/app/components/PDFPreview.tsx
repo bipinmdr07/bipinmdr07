@@ -2,10 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
-import workerSrc from 'pdfjs-dist/build/pdf.worker?worker&url';
-/* import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.mjs'; */
 
-/* pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`; */
 pdfjsLib.GlobalWorkerOptions.workerSrc = window.location.origin + '/pdf.worker.min.mjs';
 
 interface PDFPreviewProps {
@@ -22,7 +19,6 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ file }) => {
     const loadPDF = async () => {
       try {
         // Load the PDF document
-        console.log({ file });
         const loadingTask = pdfjsLib.getDocument(file);
         const pdf = await loadingTask.promise;
 

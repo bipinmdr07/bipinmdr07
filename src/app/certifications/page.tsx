@@ -1,10 +1,5 @@
 import { CERTIFICATIONS } from '@/utils/data';
-import CertificationCard, { Certification } from '../components/CertificationCard';
 import PDFPreview from '../components/PDFPreview';
-
-interface Certificatons {
-  certificates: readonly Certification[];
-}
 
 export default function Certifications() {
   return (
