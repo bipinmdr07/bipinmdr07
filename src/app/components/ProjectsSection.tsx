@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionDiv } from '@/utils/motionTags';
 import React from 'react';
@@ -32,8 +33,10 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
           {/* Project Image */}
           <div className='w-full cursor-pointer opacity-70 hover:opacity-100 md:w-1/2'>
             <a href={project.projectUrl} target='_blank' rel='noopener noreferrer'>
-              <img
+              <Image
                 src={project.imageUrl}
+                width={1080}
+                height={920}
                 alt={project.title}
                 className='h-64 w-full rounded-lg object-cover shadow-lg md:h-80'
               />

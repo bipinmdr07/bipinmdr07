@@ -1,5 +1,4 @@
 'use client';
-import { FC, JSX } from 'react';
 import { PROJECTS } from '@/utils/data';
 import ProjectsSection from '../components/ProjectsSection';
 
