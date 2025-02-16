@@ -24,6 +24,11 @@ export const ROUTES = Object.freeze([
     name: 'Contact',
     path: '/contact',
   },
+  {
+    id: 6,
+    name: 'Certifications',
+    path: '/certifications',
+  },
 ]);
 
 // social media details with icon
@@ -428,5 +433,40 @@ export const OPENSOURCE_PROJECTS = Object.freeze([
       'Requested the feature to restore local database from remote database, with ability to backup specific table.',
       'Introduce the event emitter pattern to handle the backing up of database tables (few tables at once) to avoid getting failed issue which was frequently faced when using Promise.all for backing up all tables at once',
     ],
+  },
+]);
+
+export const CERTIFICATIONS = Object.freeze([
+  {
+    title: 'AWS Certified Solutions Architect Associate',
+    issuer: 'Amazon Web Services',
+    date: 'Dec 29, 2024',
+    description: 'Demonstrated expertise in designing system on AWS.',
+    link: 'https://www.credly.com/badges/c9095c60-ad00-4aba-a110-98e45d1ac163',
+    file: '/certifications/AWS.pdf',
+  },
+  {
+    title: 'Communication Training',
+    issuer: 'Leapfrog Technology Pvt. Ltd.',
+    date: '',
+    description: 'Advanced communication training for Leaders',
+    link: '',
+    file: '/certifications/communication-training.pdf',
+  },
+  {
+    title: 'Datadog 101: Developer',
+    issuer: 'Datadog',
+    date: '',
+    description: 'Datadog 101: Developer',
+    link: '',
+    file: '/certifications/datadog-101.pdf',
+  },
+  {
+    title: 'Introduction to Observability',
+    issuer: 'Datadog',
+    date: '',
+    description: 'Introduction to Observability',
+    link: '',
+    file: '/certifications/datadog-observability.pdf',
   },
 ]);
