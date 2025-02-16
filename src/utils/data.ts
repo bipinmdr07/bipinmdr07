@@ -392,9 +392,10 @@ This apartments provide guests with a comfortable and centrally located stay.`,
 
 export const OPENSOURCE_PROJECTS = Object.freeze([
   {
-    github: '',
-    external: '',
-    title: 'bharyang',
+    id: 1,
+    imageUrl: '/bharyang.webp',
+    projectUrl: 'https://github.com/pratishshr/bharyang-vscode',
+    title: 'bharyang-vscode',
     technologies: ['javascript', 'vscode'],
     tags: ['Open Source'],
     description:
@@ -402,8 +403,9 @@ export const OPENSOURCE_PROJECTS = Object.freeze([
     contributions: ['Define a keyboard shortcut to execute the sorting function in ascending and descenting order.'],
   },
   {
-    github: 'https://github.com/surazregmi/litelement-extension',
-    external: '',
+    id: 2,
+    projectUrl: 'https://github.com/surazregmi/litelement-extension',
+    imageUrl: '/lit-element-extension.gif',
     title: 'LitElement-extension',
     technologies: ['javascript', 'vscode'],
     tags: ['Open Source'],
@@ -413,8 +415,9 @@ export const OPENSOURCE_PROJECTS = Object.freeze([
     ],
   },
   {
-    github: 'https://github.com/kritish-dhaubanjar/dynamodb-dashboard',
-    external: '',
+    id: 3,
+    projectUrl: 'https://github.com/kritish-dhaubanjar/dynamodb-dashboard',
+    imageUrl: '/dynamodb-dashboard.png',
     title: 'Dynamodb-dashboard',
     technologies: ['vuejs', 'Dynamodb', 'docker', 'AWS'],
     tags: ['Open Source'],
