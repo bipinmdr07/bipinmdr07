@@ -345,7 +345,8 @@ This apartments provide guests with a comfortable and centrally located stay.`,
     title: 'Aspen Elements',
     imageUrl: '/aspen-elements.png',
     technologies: ['LitElement', 'Storybook', 'Design System', 'MUI'],
-    html: 'A design system designed for developing modular and reusable UI components tailored for drug discovery. This incorporates Material UI web components for consistent and intuitive design, focusing on creating customizable and accessible UI elements. Aspen Elements streamlines the development of scalable, user-friendly interfaces for complex drug discovery platforms.',
+    description:
+      'A design system designed for developing modular and reusable UI components tailored for drug discovery. This incorporates Material UI web components for consistent and intuitive design, focusing on creating customizable and accessible UI elements. Aspen Elements streamlines the development of scalable, user-friendly interfaces for complex drug discovery platforms.',
     company: ['Leapfrog', 'Aspen Bioscience'],
   },
   {
