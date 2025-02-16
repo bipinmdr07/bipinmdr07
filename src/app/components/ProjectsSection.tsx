@@ -15,7 +15,7 @@ interface Project {
 }
 
 interface ProjectsSectionProps {
-  readonly projects: Project[];
+  projects: readonly Project[];
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
