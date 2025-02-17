@@ -63,7 +63,7 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ file }) => {
         <Image
           src={imageSrc}
           alt='PDF Preview'
-          className='rounded-lg border border-gray-200 shadow-lg'
+          className='rounded-lg border border-gray-200 opacity-100 shadow-md hover:opacity-70 hover:shadow-lg'
           width={1024}
           height={980}
         />
