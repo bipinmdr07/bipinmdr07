@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import * as pdfjsLib from 'pdfjs-dist';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = window.location.origin + '/pdf.worker.min.mjs';
@@ -35,7 +36,7 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ file }) => {
 
         // Render the page on the canvas
         const renderContext = {
-          canvasContext: canvas.getContext('2d'),
+          canvasContext: canvas.getContext('2d') as CanvasRenderingContext2D,
           viewport,
         };
         await page.render(renderContext).promise;
@@ -58,7 +59,15 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ file }) => {
     <div className='flex flex-col items-center'>
       {isLoading && <p className='text-gray-600'>Loading PDF...</p>}
       {error && <p className='text-red-500'>{error}</p>}
-      {imageSrc && <img src={imageSrc} alt='PDF Preview' className='rounded-lg border border-gray-200 shadow-lg' />}
+      {imageSrc && (
+        <Image
+          src={imageSrc}
+          alt='PDF Preview'
+          className='rounded-lg border border-gray-200 shadow-lg'
+          width={1024}
+          height={980}
+        />
+      )}
       <canvas ref={canvasRef} className='hidden' />
     </div>
   );
