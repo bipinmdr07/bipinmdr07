@@ -76,7 +76,9 @@ export default function Home() {
                 }}
                 key={item.id}
               >
-                <Icon icon={item.icon} className='cursor-pointer text-4xl' fill='#000000' />
+                <a href={item.profileLink} target='_blank'>
+                  <Icon icon={item.icon} className='cursor-pointer text-4xl' fill='#000000' />
+                </a>
               </MotionDiv>
             );
           })}

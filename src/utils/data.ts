@@ -37,21 +37,25 @@ export const SOCIAL_MEDIA = Object.freeze([
     id: 1,
     name: 'Instagram',
     icon: 'mdi:instagram',
+    profileLink: 'https://www.instagram.com/bipinmdr07/',
   },
   {
     id: 2,
     name: 'Facebook',
     icon: 'mdi:facebook',
+    profileLink: 'https://www.facebook.com/bipinmdr07/',
   },
   {
     id: 3,
     name: 'LinkedIn',
     icon: 'mdi:linkedin',
+    profileLink: 'https://www.linkedin.com/in/bipin-manandhar-06573b169/',
   },
   {
     id: 4,
     name: 'Github',
     icon: 'mdi:github',
+    profileLink: 'https://github.com/bipinmdr07',
   },
 ]);
 
