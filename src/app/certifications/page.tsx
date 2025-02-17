@@ -11,7 +11,9 @@ export default function Certifications() {
 
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {CERTIFICATIONS.map((cert, index) => (
-            <PDFPreview file={cert.file} key={index} />
+            <a href={cert.file} target='_blank' key={index}>
+              <PDFPreview file={cert.file} />
+            </a>
           ))}
         </div>
       </div>
