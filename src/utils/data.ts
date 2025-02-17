@@ -21,11 +21,6 @@ export const ROUTES = Object.freeze([
   },
   {
     id: 5,
-    name: 'Contact',
-    path: '/contact',
-  },
-  {
-    id: 6,
     name: 'Certifications',
     path: '/certifications',
   },
