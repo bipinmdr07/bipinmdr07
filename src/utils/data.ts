@@ -19,8 +19,9 @@ export const ROUTES = Object.freeze([
     name: 'Projects',
     path: '/projects',
   },
+  { id: 5, name: 'Experience', path: '/experience' },
   {
-    id: 5,
+    id: 6,
     name: 'Certifications',
     path: '/certifications',
   },
@@ -51,6 +52,45 @@ export const SOCIAL_MEDIA = Object.freeze([
     name: 'Github',
     icon: 'mdi:github',
     profileLink: 'https://github.com/bipinmdr07',
+  },
+]);
+
+// my experiences
+export const EXPERIENCES = Object.freeze([
+  {
+    company: 'Leaprfrog Technology Nepal Pvt. Ltd.',
+    startDate: '2018 Sept',
+    endDate: 'Present',
+    logo: '/lf-logo.jpeg',
+    roles: [
+      {
+        title: 'Senior Software Engineer',
+        startDate: '2021',
+        accomplishments: [
+          'Led migration to microservices architecture reducing API latency by 40%',
+          'Mentored 5 junior developers through code reviews and pair programming',
+          'Implemented CI/CD pipeline reducing deployment time by 65%',
+        ],
+      },
+      {
+        title: 'Software Engineer II',
+        startDate: '2020',
+        accomplishments: [
+          'Developed core payment processing module handling $2M+ daily transactions',
+          'Optimized database queries reducing response times by 30%',
+          'Introduced automated testing coverage increasing from 45% to 85%',
+        ],
+      },
+      {
+        title: 'Junior Software Engineer',
+        startDate: '2018',
+        accomplishments: [
+          'Built customer dashboard features using React and TypeScript',
+          'Fixed 150+ bugs across legacy codebase',
+          'Implemented monitoring system reducing production incidents by 25%',
+        ],
+      },
+    ],
   },
 ]);
 
