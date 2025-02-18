@@ -15,7 +15,7 @@ interface Experience {
 }
 
 interface TimelineProps {
-  experiences: Experience[];
+  experiences: readonly Experience[];
 }
 
 const ExperienceTimeline = ({ experiences }: TimelineProps) => {
@@ -56,7 +56,7 @@ const ExperienceTimeline = ({ experiences }: TimelineProps) => {
 
           {/* Roles Section */}
           <div className='mt-8 space-y-8'>
-            {experience.roles.map((role, roleIndex) => (
+            {experience.roles.map((role) => (
               <div
                 key={role.title}
                 className={`relative md:flex md:items-center md:justify-between ${
