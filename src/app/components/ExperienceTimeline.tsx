@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface Role {
   title: string;
   startDate: string;
@@ -33,9 +35,11 @@ const ExperienceTimeline = ({ experiences }: TimelineProps) => {
             <div className='relative z-10 mx-auto w-full max-w-md md:w-4/12'>
               <div className='flex items-center justify-center rounded-lg bg-accent p-6 shadow-lg ring-1 ring-black/5 transition-all hover:scale-105'>
                 <div className='text-center'>
-                  <img
+                  <Image
                     src={experience.logo}
                     alt={experience.company}
+                    width={60}
+                    height={60}
                     className='mx-auto mb-4 h-16 w-16 object-contain'
                   />
                   <h3 className='text-lg font-semibold'>{experience.company}</h3>
