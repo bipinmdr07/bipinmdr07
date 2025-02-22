@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionDiv } from '@/utils/motionTags';
 import React from 'react';
+import { Icon } from '@iconify/react';
 
 interface Project {
   id: number;
@@ -31,8 +32,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
           className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}
         >
           {/* Project Image */}
-          <div className='w-full cursor-pointer opacity-70 hover:opacity-100 md:w-1/2'>
-            <a href={project.projectUrl} target='_blank' rel='noopener noreferrer'>
+          <div className='opacity-10- w-full cursor-pointer hover:opacity-70 md:w-1/2'>
+            <div className='relative'>
               <Image
                 src={project.imageUrl}
                 width={1080}
@@ -40,7 +41,30 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                 alt={project.title}
                 className='h-64 w-full rounded-lg object-cover shadow-lg md:h-80'
               />
-            </a>
+
+              {/* Overlay */}
+              <div className='absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100'>
+                <div className='flex space-x-6'>
+                  <a
+                    href={project.projectUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-white hover:scale-[1.15]'
+                  >
+                    <Icon icon='mdi:external-link' width={24} height={24} /> {/* External Link Icon */}
+                  </a>
+                  <button
+                    onClick={() => {
+                      // Handle info icon click (e.g., open a modal or show more details)
+                      console.log('Info clicked for:', project.title);
+                    }}
+                    className='text-white hover:scale-[1.15]'
+                  >
+                    <Icon icon='mdi:information-outline' width={24} height={24} /> {/* Info Icon */}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Project Content */}
