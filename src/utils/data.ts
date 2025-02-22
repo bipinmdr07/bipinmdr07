@@ -103,9 +103,8 @@ export const EXPERIENCES = Object.freeze([
           'Designing of a database table for new requirements in collaboration with the Tech lead.',
           'Write unit tests using RSpec and strictly follow the convention set in the project.',
           'Remodel the structure of jQuery code to use the class definition instead of haphazardly using the $("class") all over the js file.',
-          'Developed core payment processing module handling $2M+ daily transactions.',
-          'Optimized database queries reducing response times by 30%.',
-          'Introduced automated testing coverage increasing from 45% to 85%.',
+          'Optimized database queries reducing response times from 10s to 1s',
+          'Introduced automated testing coverage increasing from 45% to 80% and more.',
         ],
       },
       {
