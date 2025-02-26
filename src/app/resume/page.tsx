@@ -5,7 +5,7 @@ import { transition, variants } from '@/utils/framer_variants';
 import { MotionButton, MotionDiv, MotionImage } from '@/utils/motionTags';
 import { Icon } from '@iconify/react';
 
-export default function page() {
+export default function Resume() {
   return (
     <>
       <div className={cn('mx-auto min-h-screen max-w-4xl pb-4 pt-32 2xl:pt-60')}>
