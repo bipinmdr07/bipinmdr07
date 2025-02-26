@@ -16,7 +16,7 @@ interface Project {
   github?: string;
   projectUrl?: string;
   technologies: string[];
-  contributions: string[];
+  contributions?: string[];
 }
 
 interface ProjectsSectionProps {
