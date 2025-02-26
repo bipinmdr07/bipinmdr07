@@ -1,9 +1,12 @@
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionDiv } from '@/utils/motionTags';
-import React from 'react';
+import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
+import { Drawer, DrawerClose, DrawerContent, DrawerHeader } from '@/components/ui/drawer';
 
 interface Project {
   id: number;
@@ -13,6 +16,7 @@ interface Project {
   github?: string;
   projectUrl?: string;
   technologies: string[];
+  contributions: string[];
 }
 
 interface ProjectsSectionProps {
@@ -20,6 +24,9 @@ interface ProjectsSectionProps {
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <div className='space-y-20'>
       {projects.map((project, index) => (
@@ -55,8 +62,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                   </a>
                   <button
                     onClick={() => {
-                      // Handle info icon click (e.g., open a modal or show more details)
-                      console.log('Info clicked for:', project.title);
+                      setSelectedProject(project);
+                      setIsOpen(true);
                     }}
                     className='text-white hover:scale-[1.15]'
                   >
@@ -81,6 +88,29 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
           </div>
         </MotionDiv>
       ))}
+
+      <Drawer open={isOpen}>
+        {/* Contributions list */}
+        <DrawerContent>
+          <div className='mx-auto mb-20 flex-1 space-y-4 md:w-8/12'>
+            <DrawerHeader>
+              <div className='flex w-full justify-between'>
+                <h3 className='text-lg'>Contributions</h3>
+                <DrawerClose onClick={() => setIsOpen(false)}>
+                  <Icon icon='mdi:close' width={24} height={24} />
+                </DrawerClose>
+              </div>
+            </DrawerHeader>
+            <ul className='list-disc space-y-2 pl-6 text-sm text-accent-foreground'>
+              {selectedProject?.contributions?.map((item, index) => (
+                <li key={index} className='leading-relaxed'>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 };
