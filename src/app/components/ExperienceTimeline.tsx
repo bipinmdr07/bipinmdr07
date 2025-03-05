@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Role {
   title: string;
@@ -8,6 +9,7 @@ interface Role {
 
 interface Experience {
   company: string;
+  companyUrl: string;
   startDate: string;
   endDate: string;
   logo: string;
@@ -33,21 +35,23 @@ const ExperienceTimeline = ({ experiences }: TimelineProps) => {
 
             {/* Company Card */}
             <div className='relative z-10 mx-auto w-full max-w-md md:w-4/12'>
-              <div className='flex items-center justify-center rounded-lg bg-accent p-6 shadow-lg ring-1 ring-black/5 transition-all hover:scale-105'>
-                <div className='text-center'>
-                  <Image
-                    src={experience.logo}
-                    alt={experience.company}
-                    width={60}
-                    height={60}
-                    className='mx-auto mb-4 h-16 w-16 object-contain'
-                  />
-                  <h3 className='text-lg font-semibold'>{experience.company}</h3>
-                  <p className='text-sm text-accent-foreground'>
-                    {experience.startDate} - {experience.endDate}
-                  </p>
+              <Link href={experience.companyUrl} target='_blank'>
+                <div className='flex items-center justify-center rounded-lg bg-accent p-6 shadow-lg ring-1 ring-black/5 transition-all hover:scale-105'>
+                  <div className='text-center'>
+                    <Image
+                      src={experience.logo}
+                      alt={experience.company}
+                      width={60}
+                      height={60}
+                      className='mx-auto mb-4 h-16 w-16 object-contain'
+                    />
+                    <h3 className='text-lg font-semibold'>{experience.company}</h3>
+                    <p className='text-sm text-accent-foreground'>
+                      {experience.startDate} - {experience.endDate}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Right side (odd index) */}
@@ -71,7 +75,7 @@ const ExperienceTimeline = ({ experiences }: TimelineProps) => {
                 >
                   <div className='w-full rounded-lg p-6 ring-1 ring-black/5'>
                     <div className='flex items-center justify-between md:block'>
-                      <h3 className='text-base font-semibold'>{role.title}</h3>
+                      <h3 className='text-xl font-semibold'>{role.title}</h3>
                       <p className='text-sm text-accent-foreground md:mt-1'>{role.startDate}</p>
                     </div>
                   </div>
@@ -81,10 +85,10 @@ const ExperienceTimeline = ({ experiences }: TimelineProps) => {
                 <div className='absolute left-1/2 top-6 -ml-2 h-4 w-4 rounded-full bg-indigo-500 md:relative md:left-0 md:top-0 md:mx-4 md:ml-0 md:mr-0 md:h-6 md:w-6 md:flex-none' />
 
                 {/* Accomplishments List */}
-                <div className='flex-1 space-y-4 hover:scale-105 md:w-5/12'>
+                <div className='flex-1 space-y-4 md:w-5/12'>
                   <div className='rounded-lg bg-accent p-6 opacity-70'>
                     <h3 className='mb-2 text-lg'>Accomplishments</h3>
-                    <ul className='list-disc space-y-2 pl-6 text-sm text-accent-foreground'>
+                    <ul className='list-disc space-y-2 pl-6 text-base text-accent-foreground'>
                       {role.accomplishments.map((item, index) => (
                         <li key={index} className='leading-relaxed'>
                           {item}
