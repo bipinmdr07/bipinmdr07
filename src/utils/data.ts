@@ -27,7 +27,7 @@ export const ROUTES = Object.freeze([
   },
 ]);
 
-// social media details with icon
+// Social media details with icons
 export const SOCIAL_MEDIA = Object.freeze([
   {
     id: 1,
@@ -49,122 +49,98 @@ export const SOCIAL_MEDIA = Object.freeze([
   },
   {
     id: 4,
-    name: 'Github',
+    name: 'GitHub',
     icon: 'mdi:github',
     profileLink: 'https://github.com/bipinmdr07',
   },
 ]);
 
-// my experiences
+// My experiences
 export const EXPERIENCES = Object.freeze([
   {
     company: 'Leapfrog Technology Nepal Pvt. Ltd.',
-    startDate: '2018 Sept',
+    startDate: 'Sept 2018',
     endDate: 'Present',
     companyUrl: 'https://www.lftechnology.com/',
     logo: '/lf-logo.jpeg',
     roles: [
       {
         title: 'Senior Software Engineer',
-        startDate: '2022 Jan',
+        startDate: 'Jan 2022',
         accomplishments: [
-          'Lead the team for developing the application.',
-          'Involve in the design and discovery process for application.',
-          'Direct communication with clients to gather requirements and discuss the architecture of the application.',
-          'Work with DevOps team for infrastructure setup and configure CI/CD.',
-          'Led migration to microservices architecture reducing API latency by 40%.',
+          'Led the team in developing the application.',
+          'Involved in the design and discovery process for the application.',
+          'Directly communicated with clients to gather requirements and discuss the architecture of the application.',
+          'Worked with the DevOps team for infrastructure setup and configured CI/CD.',
+          'Led migration to a microservices architecture, reducing API latency by 40%.',
           'Mentored 15+ junior developers through code reviews and pair programming.',
-          'Worked with DevOps team to implement CI/CD pipeline for pull request branch to improve the code review process.',
+          'Worked with the DevOps team to implement a CI/CD pipeline for pull request branches to improve the code review process.',
         ],
       },
       {
         title: 'Software Engineer',
-        startDate: '2020 Jan',
+        startDate: 'Jan 2020',
         accomplishments: [
-          'Design, build and maintain efficient, reusable, and reliable software.',
-          'Designing and developing business logic using REST APIs in Express JS.',
-          'Implementing new software features and maintaining existing features.',
-          'Refactoring, debugging, testing, and implementing changes to existing applications to meet project requirements.',
-          'Writing unit test for maintaining code integrity.',
-          'Involve in the design and discovery process for application to finalize all the requirements and design before.',
-          'starting the development of the application.',
+          'Designed, built, and maintained efficient, reusable, and reliable software.',
+          'Designed and developed business logic using REST APIs in Express.js.',
+          'Implemented new software features and maintained existing features.',
+          'Refactored, debugged, tested, and implemented changes to existing applications to meet project requirements.',
+          'Wrote unit tests to maintain code integrity.',
+          'Involved in the design and discovery process for the application to finalize all requirements and designs before starting development.',
           'Responsible for creating technical specifications and reports for new features.',
           'Worked on setting up the architecture of the application for both backend and frontend.',
-          'Developed core payment processing module handling $2M+ daily transactions.',
-          'Optimized database queries reducing response times by 30%.',
-          'Introduced automated testing coverage increasing from 45% to 85%.',
+          'Developed a core payment processing module handling $2M+ daily transactions.',
+          'Optimized database queries, reducing response times by 30%.',
+          'Introduced automated testing, increasing coverage from 45% to 85%.',
         ],
       },
       {
         title: 'Associate Software Engineer',
-        startDate: '2018 Sept',
+        startDate: 'Sept 2018',
         accomplishments: [
-          'Rewrite the file upload and download service in S3 bucket using the presigned URL instead of using the public file upload.',
-          'Designing of a database table for new requirements in collaboration with the Tech lead.',
-          'Write unit tests using RSpec and strictly follow the convention set in the project.',
-          'Remodel the structure of jQuery code to use the class definition instead of haphazardly using the $("class") all over the js file.',
-          'Optimized database queries reducing response times from 10s to 1s',
-          'Introduced automated testing coverage increasing from 45% to 80% and more.',
+          'Rewrote the file upload and download service in S3 bucket using presigned URLs instead of public file upload.',
+          'Designed database tables for new requirements in collaboration with the Tech Lead.',
+          'Wrote unit tests using RSpec and strictly followed the conventions set in the project.',
+          'Restructured jQuery code to use class definitions instead of haphazardly using `$("class")` throughout the JS file.',
+          'Optimized database queries, reducing response times from 10s to 1s.',
+          'Introduced automated testing, increasing coverage from 45% to 80% and beyond.',
         ],
       },
       {
         title: 'Software Engineer Intern',
-        startDate: '2018 July',
+        startDate: 'July 2018',
         accomplishments: [
-          'Learned the structuring of the HTML components for writing more clear and maintainable HTML code.',
-          'Learned the standard way of writing the CSS of the element.',
-          'Learned the vanilla JS from scratch and created the HTML games and simple applications using only Vanilla JS.',
-          'Created a basic post comment API using NodeJS, ExpressJS, JWT for authorization.',
-          'Created a FrontEnd application for post comment API using ReactJs, Axios for API call.',
-          'Learned about state management in ReactJs using redux.',
+          'Learned the structuring of HTML components for writing clearer and more maintainable HTML code.',
+          'Learned the standard way of writing CSS for elements.',
+          'Learned vanilla JS from scratch and created HTML games and simple applications using only Vanilla JS.',
+          'Created a basic post-comment API using Node.js, Express.js, and JWT for authorization.',
+          'Created a frontend application for the post-comment API using React.js and Axios for API calls.',
+          'Learned about state management in React.js using Redux.',
         ],
       },
     ],
   },
   {
     company: 'FourMB',
-    endDate: '2018 June',
-    startDate: '2017 Dec',
+    endDate: 'June 2018',
+    startDate: 'Dec 2017',
     companyUrl: 'https://www.facebook.com/fourmb/',
     logo: '/fourMB.png',
     roles: [
       {
-        title: 'Junior Ruby on Rails developer',
-        startDate: '2017 Dec',
+        title: 'Junior Ruby on Rails Developer',
+        startDate: 'Dec 2017',
         accomplishments: [
-          'Worked on implementation of Payment service using API provided by CommBank of Australia.',
-          'Learned to write the test code using RSpec for payment service.',
-          'Worked on generating Invoice in pdf format using wicked pdf gem.',
+          'Worked on implementing a payment service using the API provided by CommBank of Australia.',
+          'Learned to write test code using RSpec for the payment service.',
+          'Worked on generating invoices in PDF format using the Wicked PDF gem.',
         ],
       },
     ],
   },
 ]);
 
-// my service details
-export const SERVICES = Object.freeze([
-  {
-    id: 1,
-    name: 'UX Design',
-    icon: 'mdi:palette',
-    description:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.',
-  },
-  {
-    id: 2,
-    name: 'Web Development',
-    icon: 'mdi:web',
-    description: '* Aenean in sem ac leo mollis blandit.',
-  },
-  {
-    id: 3,
-    name: '3D Design',
-    icon: 'mdi:unity',
-    description: '* Aenean in sem ac leo mollis blandit.',
-  },
-]);
-
-// expertise skills
+// Expertise skills
 export const EXPERTISE_AREA = Object.freeze([
   {
     id: 1,
@@ -203,7 +179,7 @@ export const EXPERTISE_AREA = Object.freeze([
   },
 ]);
 
-// languages and tools
+// Languages and tools
 export const LANGUAGES_AND_TOOLS = Object.freeze([
   {
     name: 'HTML5',
@@ -222,15 +198,15 @@ export const LANGUAGES_AND_TOOLS = Object.freeze([
     icon: 'mdi:tailwind',
   },
   {
-    name: 'JQuery',
+    name: 'jQuery',
     icon: 'mdi:jquery',
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     icon: 'mdi:language-javascript',
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     icon: 'mdi:language-typescript',
   },
   {
@@ -246,11 +222,11 @@ export const LANGUAGES_AND_TOOLS = Object.freeze([
     icon: 'simple-icons:reactquery',
   },
   {
-    name: 'NextJS',
+    name: 'Next.js',
     icon: 'catppuccin:next',
   },
   {
-    name: 'VueJS',
+    name: 'Vue.js',
     icon: 'mdi:vuejs',
   },
   {
@@ -258,7 +234,7 @@ export const LANGUAGES_AND_TOOLS = Object.freeze([
     icon: 'mdi:vuetify',
   },
   {
-    name: 'PolymerJS',
+    name: 'Polymer.js',
     icon: 'mdi:polymer',
   },
   {
@@ -278,11 +254,11 @@ export const LANGUAGES_AND_TOOLS = Object.freeze([
     icon: 'mdi:language-python',
   },
   {
-    name: 'Nodejs',
+    name: 'Node.js',
     icon: 'mdi:nodejs',
   },
   {
-    name: 'ExpressJS',
+    name: 'Express.js',
     icon: 'lineicons:expressjs',
   },
   {
@@ -347,7 +323,7 @@ export const LANGUAGES_AND_TOOLS = Object.freeze([
   },
 ]);
 
-// PROJECTS
+// Projects
 export const PROJECTS = Object.freeze([
   {
     id: 1,
@@ -357,12 +333,11 @@ export const PROJECTS = Object.freeze([
     imageUrl: '/paxsafe.jpg',
     technologies: ['Ruby on Rails', 'jQuery', 'PostgreSQL', 'AWS'],
     tags: ['Booking'],
-    description: `Paxsafe is an Australian base company offereing the private apartment accomodations near to Sydney's iconic Hyde Park.
-This apartments provide guests with a comfortable and centrally located stay.`,
+    description: `Paxsafe is an Australian-based company offering private apartment accommodations near Sydney's iconic Hyde Park. These apartments provide guests with a comfortable and centrally located stay.`,
     contributions: [
-      'Integration of Commbank API for handling the payment through ATM cards from admin panel.',
-      'Worked on generating downloadable Invoice in PDF format using wickedpdf gem.',
-      'Write unit tests using RSpec.',
+      'Integrated CommBank API for handling payments through ATM cards from the admin panel.',
+      'Worked on generating downloadable invoices in PDF format using the Wicked PDF gem.',
+      'Wrote unit tests using RSpec.',
     ],
     company: ['FourMB'],
   },
@@ -375,15 +350,15 @@ This apartments provide guests with a comfortable and centrally located stay.`,
     technologies: ['Ruby on Rails', 'jQuery', 'PostgreSQL', 'AWS'],
     tags: ['Language Translation'],
     description:
-      'Language Scientific is a U.S.-based company that provided specialized translation and localization service for medical, scientific, and technical industries. They delivery high-quality translations for medical documents, software localization, eLearning and more.',
+      'Language Scientific is a U.S.-based company that provides specialized translation and localization services for medical, scientific, and technical industries. They deliver high-quality translations for medical documents, software localization, eLearning, and more.',
     contributions: [
-      'Lead the development team of 4 people.',
-      'Worked on optimization of the Vendor list page, reducing the loading time from 5 sec to 0.5 sec.',
-      'Worked on visually representing the each step of the file translation process for each project in the projects dashboard, adding the capability for user to view project details easily.',
-      'Implemented the thread concept to import project from .mer files from cron jobs, reducing the import time by 20x times.',
-      'Worked on writing the CKeditor plugin to embed the email attachments as inline image sent from email.',
-      'Remodel the structure of jQuery to use ES6 class for code readability and maintainability of the code.',
-      'Revamped the dashboard page to include all the project steps and infromation in the dashboard with suitable color for status and add capability to navigate to particular step directly from dashbaord.',
+      'Led the development team of 4 people.',
+      'Worked on optimizing the Vendor list page, reducing loading time from 5 seconds to 0.5 seconds.',
+      'Worked on visually representing each step of the file translation process for each project in the projects dashboard, adding the capability for users to view project details easily.',
+      'Implemented the thread concept to import projects from .mer files from cron jobs, reducing import time by 20x.',
+      'Worked on writing a CKEditor plugin to embed email attachments as inline images sent from email.',
+      'Restructured jQuery to use ES6 classes for code readability and maintainability.',
+      'Revamped the dashboard page to include all project steps and information in the dashboard with suitable colors for status and added the capability to navigate to a particular step directly from the dashboard.',
     ],
     company: ['Leapfrog', 'Language Scientific'],
   },
@@ -393,21 +368,21 @@ This apartments provide guests with a comfortable and centrally located stay.`,
     projectUrl: 'https://informeddna.com',
     title: 'gWell.health',
     imageUrl: '/gwell.png',
-    technologies: ['React', 'Redux', 'MongoDB', 'strapi', 'nodejs', 'docker', 'AWS', 'React Native'],
+    technologies: ['React', 'Redux', 'MongoDB', 'Strapi', 'Node.js', 'Docker', 'AWS', 'React Native'],
     tags: ['Health'],
     description:
-      "gWell Health is a digital health, genomics, and wellness company focused on improving individuals' overall well-bing by providing personalized wellness plans based on DNA analysis, health history, and lifestyle.",
+      "gWell Health is a digital health, genomics, and wellness company focused on improving individuals' overall well-being by providing personalized wellness plans based on DNA analysis, health history, and lifestyle.",
     contributions: [
-      'Involved in the Design and Discovery phase of the application and finalize the tech stack to be used for development.',
-      'Lead the development team of 7 members and define the conventions to follow during development.',
-      'Worked on application architecture design, and database modeling taking help from experiences senior developer.',
-      'Worked on initial project setup and setup the application to use the custom model with mongoose to have common methods for data retrieval maintaining the consistency throughout the application',
-      'Worked with cross-platform team and collaborate to leverage the maximum capacity of the whole team.',
-      'Worked closely with Design Team and Client to improve the user experience, and understand the value of the product.',
-      'Worked with DevOps team to setup the application infrastructure.',
-      'Introduced the facade pattern to save common information into two databases with necessary manipulation for mobile app to consume.',
-      'Document all possible API required and possible payload format using openAPI before starting the development, helping the team to know the exact purpose of each API.',
-      "Added the patient's well being graph to visualize the wellness score of the patient on the basis of survey form filled by patient through mobile application.",
+      'Involved in the Design and Discovery phase of the application and finalized the tech stack to be used for development.',
+      'Led the development team of 7 members and defined the conventions to follow during development.',
+      'Worked on application architecture design and database modeling with the help of experienced senior developers.',
+      'Worked on the initial project setup and configured the application to use custom models with Mongoose to have common methods for data retrieval, maintaining consistency throughout the application.',
+      'Worked with the cross-platform team to leverage the maximum capacity of the entire team.',
+      'Worked closely with the Design Team and Client to improve user experience and understand the value of the product.',
+      'Worked with the DevOps team to set up the application infrastructure.',
+      'Introduced the facade pattern to save common information into two databases with necessary manipulation for the mobile app to consume.',
+      'Documented all possible APIs required and possible payload formats using OpenAPI before starting development, helping the team understand the exact purpose of each API.',
+      "Added the patient's well-being graph to visualize the wellness score of the patient based on the survey form filled out by the patient through the mobile application.",
     ],
     company: ['Leapfrog', 'gWell'],
   },
@@ -420,13 +395,13 @@ This apartments provide guests with a comfortable and centrally located stay.`,
     technologies: ['React', 'Redux', 'MongoDB', 'AWS', 'Django'],
     tags: ['Health'],
     description:
-      'Innovaccer referral management is a web application developed by Leapfrog Technologies in collaboration with Innovaccer Inc. The application is used to connect or refer patients to different doctors/specialists in different medical fields inside for outside network, according to the needs of the patients.',
+      'Innovaccer Referral Management is a web application developed by Leapfrog Technologies in collaboration with Innovaccer Inc. The application is used to connect or refer patients to different doctors/specialists in various medical fields within or outside the network, according to the needs of the patients.',
     company: ['Leapfrog', 'Innovaccer'],
     contributions: [
-      'Lead the front end team and work with team from different geographical location.',
-      'Introduced the Finite State Machine implementation as the patient detai page was heavely driven by the status of the patient.',
-      'Wrote the gitlab CI/CD to address the deployment to the temporary server after pull request is created in coordication with the DevOps team',
-      'Effectively used the design system they already had in place to maintain the design consistency throughout the application',
+      'Led the frontend team and worked with teams from different geographical locations.',
+      'Introduced Finite State Machine implementation as the patient detail page was heavily driven by the status of the patient.',
+      'Wrote GitLab CI/CD to address deployment to the temporary server after a pull request is created in coordination with the DevOps team.',
+      'Effectively used the design system they already had in place to maintain design consistency throughout the application.',
     ],
   },
   {
@@ -443,19 +418,19 @@ This apartments provide guests with a comfortable and centrally located stay.`,
   {
     id: 6,
     github: '',
-    projectUrl: ' https://aspenbiosciences.com/products/pipeline/',
+    projectUrl: 'https://aspenbiosciences.com/products/pipeline/',
     title: 'Aspen Pipeline',
     imageUrl: '/aspen-pipeline.webp',
     technologies: ['LitElement', 'OracleDB', 'Micronaut', 'MUI', 'Drug Discovery'],
     description:
-      'Aspen Pipeline is a web application aims to provide the scientist involved in drug discovery process with the proper way to manage the information in a systematic way.',
+      'Aspen Pipeline is a web application aimed at providing scientists involved in the drug discovery process with a proper way to manage information systematically.',
     company: ['Leapfrog', 'Aspen Bioscience'],
     contributions: [
-      'Lead the frontend team of 12 members',
-      'Actively involved in the design and discovery (DND) process to gather the requirements and sycn with project manager to break the requirements into doable tasks.',
-      'Introduced the concept of design system and add storybook for the components and documentations to maintain the design consistency across the different projects of organization.',
-      'Introduced the concept of adding the schema for tablel to control the sorting, searching, filtering, and custom methods without needing to change the table code, giving developer full capability to customize the table just with few more props.',
-      'Integrate the feature to create JIRA ticket on support board by adding the report feature on error popup, which create JIRA ticket with necessary information like URL, error traces, user info, etc for eacy debugging.',
+      'Led the frontend team of 12 members.',
+      'Actively involved in the Design and Discovery (DND) process to gather requirements and sync with the project manager to break requirements into doable tasks.',
+      'Introduced the concept of a design system and added Storybook for components and documentation to maintain design consistency across different projects of the organization.',
+      'Introduced the concept of adding a schema for tables to control sorting, searching, filtering, and custom methods without needing to change the table code, giving developers full capability to customize the table with just a few more props.',
+      'Integrated the feature to create JIRA tickets on the support board by adding a report feature on the error popup, which creates JIRA tickets with necessary information like URL, error traces, user info, etc., for easy debugging.',
     ],
   },
   {
@@ -464,19 +439,19 @@ This apartments provide guests with a comfortable and centrally located stay.`,
     projectUrl: 'https://trayt.health/',
     title: 'Trayt.Health',
     imageUrl: '/trayt.png',
-    technologies: ['React', 'Redux', 'nodejs', 'Dynamodb', 'AWS'],
+    technologies: ['React', 'Redux', 'Node.js', 'DynamoDB', 'AWS'],
     tags: ['Health'],
     description:
-      'Trayt is an AI-powered, multifactorial data analytics and clinical decision support platform that expands access to care and help clinics dramatically improve diagnosis and treatment accuracy for patients with neuropsychiatric and medical health conditions.',
+      'Trayt is an AI-powered, multifactorial data analytics and clinical decision support platform that expands access to care and helps clinics dramatically improve diagnosis and treatment accuracy for patients with neuropsychiatric and medical health conditions.',
     company: ['Leapfrog', 'Trayt.Health'],
     contributions: [
-      'Worked with cross functional team to understand the requirement better and prioritize features accordingly',
-      'Introduced the concept of policy middleware for checking the user access to perform certain action on specific route.',
-      'Configure global error handline with sentry and datadog integration',
-      'Made the response page to show the user engagement chart using Nivo charts which got lots of recognization from Texas and Vermont state.',
-      'Add the user flow diagram in the documenation for one complex feature in the application, that took me around 3-4 working days.',
-      'Actively participate in Knowledge sharing session.',
-      'Worked on creating the architecture design for document upload feature using polymerphic association to store document related to multiple tables in single place',
+      'Worked with a cross-functional team to better understand requirements and prioritize features accordingly.',
+      'Introduced the concept of policy middleware for checking user access to perform certain actions on specific routes.',
+      'Configured global error handling with Sentry and Datadog integration.',
+      'Created the response page to show user engagement charts using Nivo charts, which received significant recognition from Texas and Vermont states.',
+      'Added user flow diagrams to the documentation for one complex feature in the application, which took around 3-4 working days.',
+      'Actively participated in knowledge-sharing sessions.',
+      'Worked on creating the architecture design for the document upload feature using polymorphic associations to store documents related to multiple tables in a single place.',
     ],
   },
 ]);
@@ -487,37 +462,37 @@ export const OPENSOURCE_PROJECTS = Object.freeze([
     imageUrl: '/bharyang.webp',
     projectUrl: 'https://github.com/pratishshr/bharyang-vscode',
     title: 'bharyang-vscode',
-    technologies: ['javascript', 'vscode'],
+    technologies: ['JavaScript', 'VSCode'],
     tags: ['Open Source'],
     description:
-      'A vs-code extension for sorting the line by its length and grouping the imports to maintain the ladder import structure and make code look visually appealing.',
-    contributions: ['Define a keyboard shortcut to execute the sorting function in ascending and descenting order.'],
+      'A VS Code extension for sorting lines by their length and grouping imports to maintain a ladder import structure, making code visually appealing.',
+    contributions: ['Defined a keyboard shortcut to execute the sorting function in ascending and descending order.'],
   },
   {
     id: 2,
     projectUrl: 'https://github.com/surazregmi/litelement-extension',
     imageUrl: '/lit-element-extension.gif',
     title: 'LitElement-extension',
-    technologies: ['javascript', 'vscode'],
+    technologies: ['JavaScript', 'VSCode'],
     tags: ['Open Source'],
-    description: 'A vs-code extension for providing a snippet defining a class or function for lit-element.',
+    description: 'A VS Code extension for providing snippets to define a class or function for LitElement.',
     contributions: [
-      'Added the snippet for adding property, class and function for developer to write the jsdoc immediately after defining it',
+      'Added snippets for adding properties, classes, and functions for developers to write JSDoc immediately after defining them.',
     ],
   },
   {
     id: 3,
     projectUrl: 'https://github.com/kritish-dhaubanjar/dynamodb-dashboard',
     imageUrl: '/dynamodb-dashboard.png',
-    title: 'Dynamodb-dashboard',
-    technologies: ['vuejs', 'Dynamodb', 'docker', 'AWS'],
+    title: 'DynamoDB-dashboard',
+    technologies: ['Vue.js', 'DynamoDB', 'Docker', 'AWS'],
     tags: ['Open Source'],
-    description: 'A web application for view the local and remote dynamodb data.',
+    description: 'A web application for viewing local and remote DynamoDB data.',
     contributions: [
-      'Work closely with the author to define the requirements and request features.',
-      'Provider feedback to the author and asked for improvements.',
-      'Requested the feature to restore local database from remote database, with ability to backup specific table.',
-      'Introduce the event emitter pattern to handle the backing up of database tables (few tables at once) to avoid getting failed issue which was frequently faced when using Promise.all for backing up all tables at once',
+      'Worked closely with the author to define requirements and request features.',
+      'Provided feedback to the author and requested improvements.',
+      'Requested the feature to restore the local database from a remote database, with the ability to back up specific tables.',
+      'Introduced the event emitter pattern to handle backing up database tables (a few tables at once) to avoid frequent failures when using `Promise.all` for backing up all tables at once.',
     ],
   },
 ]);
@@ -527,7 +502,7 @@ export const CERTIFICATIONS = Object.freeze([
     title: 'AWS Certified Solutions Architect Associate',
     issuer: 'Amazon Web Services',
     date: 'Dec 29, 2024',
-    description: 'Demonstrated expertise in designing system on AWS.',
+    description: 'Demonstrated expertise in designing systems on AWS.',
     link: 'https://www.credly.com/badges/c9095c60-ad00-4aba-a110-98e45d1ac163',
     file: '/certifications/AWS.pdf',
   },
@@ -535,7 +510,7 @@ export const CERTIFICATIONS = Object.freeze([
     title: 'Communication Training',
     issuer: 'Leapfrog Technology Pvt. Ltd.',
     date: '',
-    description: 'Advanced communication training for Leaders',
+    description: 'Advanced communication training for leaders.',
     link: '',
     file: '/certifications/communication-training.pdf',
   },
