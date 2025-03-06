@@ -349,6 +349,10 @@ export const LANGUAGES_AND_TOOLS = Object.freeze({
       icon: 'cib:jest',
     },
     {
+      name: 'React Testing Library',
+      icon: 'simple-icons:testinglibrary',
+    },
+    {
       name: 'RSpec',
       icon: 'devicon:rspec',
     },
