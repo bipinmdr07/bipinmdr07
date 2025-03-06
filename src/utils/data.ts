@@ -180,148 +180,254 @@ export const EXPERTISE_AREA = Object.freeze([
 ]);
 
 // Languages and tools
-export const LANGUAGES_AND_TOOLS = Object.freeze([
-  {
-    name: 'HTML5',
-    icon: 'mdi:language-html5',
-  },
-  {
-    name: 'CSS3',
-    icon: 'mdi:language-css3',
-  },
-  {
-    name: 'Bootstrap',
-    icon: 'mdi:bootstrap',
-  },
-  {
-    name: 'Tailwind',
-    icon: 'mdi:tailwind',
-  },
-  {
-    name: 'jQuery',
-    icon: 'mdi:jquery',
-  },
-  {
-    name: 'JavaScript',
-    icon: 'mdi:language-javascript',
-  },
-  {
-    name: 'TypeScript',
-    icon: 'mdi:language-typescript',
-  },
-  {
-    name: 'React',
-    icon: 'mdi:react',
-  },
-  {
-    name: 'Redux',
-    icon: 'cib:redux',
-  },
-  {
-    name: 'React Query',
-    icon: 'simple-icons:reactquery',
-  },
-  {
-    name: 'Next.js',
-    icon: 'catppuccin:next',
-  },
-  {
-    name: 'Vue.js',
-    icon: 'mdi:vuejs',
-  },
-  {
-    name: 'Vuetify',
-    icon: 'mdi:vuetify',
-  },
-  {
-    name: 'Polymer.js',
-    icon: 'mdi:polymer',
-  },
-  {
-    name: 'LitElement',
-    icon: 'simple-icons:lit',
-  },
-  {
-    name: 'Ruby',
-    icon: 'mdi:language-ruby',
-  },
-  {
-    name: 'Ruby on Rails',
-    icon: 'mdi:language-ruby-on-rails',
-  },
-  {
-    name: 'Python',
-    icon: 'mdi:language-python',
-  },
-  {
-    name: 'Node.js',
-    icon: 'mdi:nodejs',
-  },
-  {
-    name: 'Express.js',
-    icon: 'lineicons:expressjs',
-  },
-  {
-    name: 'MySQL',
-    icon: 'cib:mysql',
-  },
-  {
-    name: 'PostgreSQL',
-    icon: 'cib:postgresql',
-  },
-  {
-    name: 'MongoDB',
-    icon: 'devicon-plain:mongodb-wordmark',
-  },
-  {
-    name: 'Mongoose',
-    icon: 'simple-icons:mongoose',
-  },
-  {
-    name: 'Firebase',
-    icon: 'cib:firebase',
-  },
-  {
-    name: 'DynamoDB',
-    icon: 'simple-icons:amazondynamodb',
-  },
-  {
-    name: 'Git',
-    icon: 'mdi:git',
-  },
-  {
-    name: 'GitHub',
-    icon: 'mdi:github',
-  },
-  {
-    name: 'GitLab',
-    icon: 'mdi:gitlab',
-  },
-  {
-    name: 'AWS',
-    icon: 'mdi:aws',
-  },
-  {
-    name: 'Nginx',
-    icon: 'cib:nginx',
-  },
-  {
-    name: 'CircleCI',
-    icon: 'cib:circleci',
-  },
-  {
-    name: 'Jest',
-    icon: 'cib:jest',
-  },
-  {
-    name: 'Bash Script',
-    icon: 'mdi:bash',
-  },
-  {
-    name: 'Figma',
-    icon: 'cib:figma',
-  },
-]);
+export const LANGUAGES_AND_TOOLS = Object.freeze({
+  FRONTEND: [
+    {
+      name: 'HTML5',
+      icon: 'mdi:language-html5',
+    },
+    {
+      name: 'CSS3',
+      icon: 'mdi:language-css3',
+    },
+    {
+      name: 'JavaScript',
+      icon: 'mdi:language-javascript',
+    },
+    {
+      name: 'TypeScript',
+      icon: 'mdi:language-typescript',
+    },
+    {
+      name: 'React',
+      icon: 'mdi:react',
+    },
+    {
+      name: 'Next.js',
+      icon: 'catppuccin:next',
+    },
+    {
+      name: 'Vue.js',
+      icon: 'mdi:vuejs',
+    },
+    {
+      name: 'jQuery',
+      icon: 'mdi:jquery',
+    },
+    {
+      name: 'Tailwind',
+      icon: 'mdi:tailwind',
+    },
+    {
+      name: 'Bootstrap',
+      icon: 'mdi:bootstrap',
+    },
+    {
+      name: 'LitElement',
+      icon: 'simple-icons:lit',
+    },
+    {
+      name: 'Polymer.js',
+      icon: 'mdi:polymer',
+    },
+  ],
+  BACKEND: [
+    {
+      name: 'Node.js',
+      icon: 'mdi:nodejs',
+    },
+    {
+      name: 'Express.js',
+      icon: 'lineicons:expressjs',
+    },
+    {
+      name: 'Ruby on Rails',
+      icon: 'mdi:language-ruby-on-rails',
+    },
+    {
+      name: 'Python',
+      icon: 'mdi:language-python',
+    },
+    {
+      name: 'Micronaut',
+      icon: 'simple-icons:micronaut',
+    },
+  ],
+  LIBRARIES_AND_FRAMEWORKS: [
+    {
+      name: 'Redux',
+      icon: 'cib:redux',
+    },
+    {
+      name: 'React Query',
+      icon: 'simple-icons:reactquery',
+    },
+    {
+      name: 'Vuetify',
+      icon: 'mdi:vuetify',
+    },
+    {
+      name: 'MUI (Material-UI)',
+      icon: 'simple-icons:mui',
+    },
+  ],
+  DATABASES: [
+    {
+      name: 'MySQL',
+      icon: 'cib:mysql',
+    },
+    {
+      name: 'PostgreSQL',
+      icon: 'cib:postgresql',
+    },
+    {
+      name: 'MongoDB',
+      icon: 'devicon-plain:mongodb-wordmark',
+    },
+    {
+      name: 'Mongoose',
+      icon: 'simple-icons:mongoose',
+    },
+    {
+      name: 'Firebase',
+      icon: 'cib:firebase',
+    },
+    {
+      name: 'DynamoDB',
+      icon: 'simple-icons:amazondynamodb',
+    },
+    {
+      name: 'OracleDB',
+      icon: 'simple-icons:oracle',
+    },
+  ],
+  DEVOPS_AND_TOOLS: [
+    {
+      name: 'Git',
+      icon: 'mdi:git',
+    },
+    {
+      name: 'GitHub',
+      icon: 'mdi:github',
+    },
+    {
+      name: 'GitLab',
+      icon: 'mdi:gitlab',
+    },
+    {
+      name: 'AWS',
+      icon: 'mdi:aws',
+    },
+    {
+      name: 'Docker',
+      icon: 'cib:docker',
+    },
+    {
+      name: 'Nginx',
+      icon: 'cib:nginx',
+    },
+    {
+      name: 'CircleCI',
+      icon: 'cib:circleci',
+    },
+    {
+      name: 'Bash Script',
+      icon: 'mdi:bash',
+    },
+  ],
+  DESIGN_AND_TESTING: [
+    {
+      name: 'Figma',
+      icon: 'cib:figma',
+    },
+    {
+      name: 'Storybook',
+      icon: 'simple-icons:storybook',
+    },
+    {
+      name: 'Jest',
+      icon: 'cib:jest',
+    },
+    {
+      name: 'RSpec',
+      icon: 'devicon:rspec',
+    },
+    {
+      name: 'Sentry',
+      icon: 'simple-icons:sentry',
+    },
+    {
+      name: 'Datadog',
+      icon: 'simple-icons:datadog',
+    },
+  ],
+  COLLABORATION_TOOLS: [
+    {
+      name: 'Jira',
+      icon: 'cib:jira',
+    },
+    {
+      name: 'Trello',
+      icon: 'cib:trello',
+    },
+    {
+      name: 'Slack',
+      icon: 'cib:slack',
+    },
+    {
+      name: 'Microsoft Teams',
+      icon: 'fluent-color:people-team-20',
+    },
+    {
+      name: 'Zoom',
+      icon: 'cib:zoom',
+    },
+    {
+      name: 'Google Meet',
+      icon: 'fluent:meet-now-24-filled',
+    },
+    {
+      name: 'Confluence',
+      icon: 'cib:confluence',
+    },
+    {
+      name: 'Notion',
+      icon: 'cib:notion',
+    },
+    {
+      name: 'Miro',
+      icon: 'cib:miro', // TODO: fix icon
+    },
+
+    // LUcid chart
+  ],
+  METHODOLOGIES: [
+    {
+      name: 'Agile Methodology',
+      icon: 'iconoir:agile',
+    },
+    {
+      name: 'Scrum',
+      icon: 'iconoir:agile',
+    },
+    {
+      name: 'Kanban',
+      icon: 'bi:kanban',
+    },
+    {
+      name: 'Pair Programming',
+      icon: 'ion:people-circle',
+    },
+    {
+      name: 'Code Reviews',
+      icon: 'gg:git-pull',
+    },
+    {
+      name: 'CI/CD',
+      icon: 'famicons:git-merge',
+    },
+  ],
+});
 
 // Projects
 export const PROJECTS = Object.freeze([
