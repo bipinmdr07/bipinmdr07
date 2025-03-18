@@ -1,3 +1,5 @@
+'use client';
+
 import { transition, variants } from '@/utils/framer_variants';
 import { MotionButton, MotionDiv, MotionImage } from '@/utils/motionTags';
 import { cn } from '@/lib/utils';
@@ -57,6 +59,9 @@ export default function Home() {
           whileHover={{ scale: 0.95 }}
           variants={variants.moveUp}
           transition={transition.moveUp}
+          onClick={() => {
+            window.open('/resume/Resume.pdf', '_blank');
+          }}
         >
           <DownloadIcon className='mr-2' />
           Download CV
