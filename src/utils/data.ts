@@ -72,9 +72,7 @@ export const EXPERIENCES = Object.freeze([
           'Involved in the design and discovery process for the application.',
           'Directly communicated with clients to gather requirements and discuss the architecture of the application.',
           'Worked with the DevOps team for infrastructure setup and configured CI/CD.',
-          'Led migration to a microservices architecture, reducing API latency by 40%.',
-          'Mentored 15+ junior developers through code reviews and pair programming.',
-          'Worked with the DevOps team to implement a CI/CD pipeline for pull request branches to improve the code review process.',
+          'Implemented the architecture for file upload to S3 bucket using presigned URL',
         ],
       },
       {
@@ -89,7 +87,6 @@ export const EXPERIENCES = Object.freeze([
           'Involved in the design and discovery process for the application to finalize all requirements and designs before starting development.',
           'Responsible for creating technical specifications and reports for new features.',
           'Worked on setting up the architecture of the application for both backend and frontend.',
-          'Developed a core payment processing module handling $2M+ daily transactions.',
           'Optimized database queries, reducing response times by 30%.',
           'Introduced automated testing, increasing coverage from 45% to 85%.',
         ],
@@ -103,7 +100,6 @@ export const EXPERIENCES = Object.freeze([
           'Wrote unit tests using RSpec and strictly followed the conventions set in the project.',
           'Restructured jQuery code to use class definitions instead of haphazardly using `$("class")` throughout the JS file.',
           'Optimized database queries, reducing response times from 10s to 1s.',
-          'Introduced automated testing, increasing coverage from 45% to 80% and beyond.',
         ],
       },
       {
